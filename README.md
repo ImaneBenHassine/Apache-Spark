@@ -10,7 +10,7 @@ In other words, PySpark is a **Python API** for Apache Spark which is an analyti
 
 PySpark supports two types of Data Abstractions:
 
-1. RDDs
+1. RDDs (Resilient Distributed Datasets)
 2. DataFrames
 
 
