@@ -17,11 +17,11 @@ PySpark supports two types of Data Abstractions:
 
 1. Data structure 
 
-      1.1  RDD.ipynb
+      1.1  RDD
       
-      1.2  Dataframe.ipynb
+      1.2  Dataframe
       
-      1.3  Conversion between rdd & dataframe.ipynb
+      1.3  Conversion between rdd & dataframe
 
  2. Data manipulation
  
