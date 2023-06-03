@@ -26,4 +26,17 @@ PySpark supports two types of Data Abstractions:
          ii. System variable:
               - Variable: PATH
               - Value: C:\Program Files\Java\jdk1.8.0_91\bin
+     
+   #### 1.2 Install Spark 
+   Download spark-3.4.0-bin-hadoop3 from the following link: http://spark.apache.org/downloads.html and extract it.
+   
+    a. Set environmental variables:
+   
+         i. User variable:
+              - Variable: SPARK_HOME
+              - Value: C:\..\spark\spark-3.4.0-bin-hadoop3
+
+         ii. System variable:
+              - Variable: PATH
+              - Value: C:\..\spark\spark-3.4.0-bin-hadoop3\bin
 
