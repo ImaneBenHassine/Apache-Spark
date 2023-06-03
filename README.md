@@ -15,7 +15,7 @@ PySpark supports two types of Data Abstractions:
 
 ## Steps:
 #### 1. Installing Spark on Windows 10
-   #### 1.1 Install Java 8 :
+   #### 1.1 Install Java 8 
   Download Java 8 from the link : http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
    
     a. Set environmental variables:
@@ -39,4 +39,16 @@ PySpark supports two types of Data Abstractions:
          ii. System variable:
               - Variable: PATH
               - Value: C:\..\spark\spark-3.4.0-bin-hadoop3\bin
+              
+   #### 1.3 Windows Utilities
+   Download it from the link: https://github.com/steveloughran/winutils/blob/master/hadoop-3.0.0/bin/winutils.exe
+    
+    a. Set environmental variables:
+   
+         i. User variable:
+              - Variable: HADOOP_HOME
+              - Value: C:\..\spark\Hadoop
 
+         ii. System variable:
+              - Variable: PATH
+              - Value: C:\..\spark\Hadoop\bin
