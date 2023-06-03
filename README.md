@@ -52,3 +52,5 @@ PySpark supports two types of Data Abstractions:
          ii. System variable:
               - Variable: PATH
               - Value: C:\..\spark\Hadoop\bin
+              
+Execute Spark on cmd : spark-shell
