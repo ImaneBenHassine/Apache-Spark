@@ -14,69 +14,16 @@ PySpark supports two types of Data Abstractions:
   2. ***DataFrames*** 
 
 ## Steps:
+#### 1. Installing Spark on Windows 10
+   #### 1.1 Install Java 8 :
+  Download Java 8 from the link : http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+   
+    a. Set environmental variables:
+   
+         i. User variable:
+              - Variable: JAVA_HOME
+              - Value: C:\Program Files\Java\jdk1.8.0_91
+         ii. System variable:
+              - Variable: PATH
+              - Value: C:\Program Files\Java\jdk1.8.0_91\bin
 
-1. Data structure 
-
-      1.1  RDD
-      
-      1.2  Dataframe
-      
-      1.3  Conversion between rdd & dataframe
-
- 2. Data manipulation
- 
-2.1-map-functions.ipynb
-2.2-aggregate-functions.ipynb
-2.3-continuous-variable-to-categorical-variable.ipynb
-2.4-first-data-check.ipynb
-2.5-subset-dataframe-by-row.ipynb
-2.6-subset-dataframe-by-column.ipynb
-2.7.1-column-expression.ipynb
-2.7.2-dot-column-expression.ipynb
-2.7.3-boolean-column-expression.ipynb
-2.8-sql-functions-to-extend-column-expressions.ipynb
-2.9-user-defined-sql-function (udf).ipynb
-import-and-export-data.ipynb
-
- 3. Data preparation
- 
-stringindexer-and-onehotencoder.ipynb
-vector-assembler.ipynb
-
- 4. Miscellaneous
- 
-add-python-files-to-spark-cluster.ipynb
-dense-vs-sparse-vectors.ipynb
-issues-and-solutions.ipynb
-pipeline.ipynb
-sql-functions.ipynb
-TF-IDF.ipynb
-
-5. Module-turning
-
-cross-validation.ipynb
-regularization.ipynb
-
-6. Machine-learning
-
- 6.1 classification
- 
-binary-classification.ipynb
-decision-tree-classification.ipynb
-gradient-boost-tree-classification.ipynb
-logistic-regression.ipynb
-naive-bayes-classification.ipynb
-random-forest-classification.ipynb
-
- 6.2 regression
- 
-generalized-linear-regression.ipynb
-linear-regression.ipynb
-
- 7. natural-language-processing
- 
-nlp-and-nltk-basics.ipynb
-nlp-information-extraction.ipynb
-skills-needed-for-nlp-jobs.ipynb
-
-## Libraries:
