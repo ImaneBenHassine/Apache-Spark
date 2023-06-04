@@ -13,7 +13,7 @@ PySpark supports two types of Data Abstractions:
   1. ***RDDs*** (Resilient Distributed Datasets)
   2. ***DataFrames*** 
 
-## Steps:
+## Steps
 ### 1. Installing Spark on Windows 10
    #### 1.1 Install Java 8 
   Download Java 8 from the link : http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
