@@ -64,6 +64,15 @@ Finally, the Spark logo appears, and the prompt displays the Scala shell !
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/9b882c24-d4be-4ef4-9d41-3023330e0bed)
 
+Open a web browser and navigate to http://desktop-o58pauc:4040
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/36276ae9-00ff-4371-a77f-94565dae6f18)
+
+#### 1.5 Test Spark
+
+Let's use Scala to read the contents of a file and create a "test" text.
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/390203ab-ea74-42ab-8b5c-a893bc9a8af8)
+
+the output shows an RDD is created
 
 ### Spark & MySQL
 Download the Community (GPL) version of MySQL for Windows from the link : https://dev.mysql.com/downloads/file/?id=518835
