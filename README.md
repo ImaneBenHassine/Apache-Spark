@@ -104,11 +104,13 @@ LOAD DATA
      lines terminated by '\r\n'
      ignore 1 lines;
      
-but we have an Error Code: 3948. Loading local data is disabled; this must be enabled on both the client and server sides	0.000 sec. So we need to activate th we use **MySQL Command Line** : 
-mysql -u root -p
+but we have an Error Code: 3948. Loading local data is disabled; this must be enabled on both the client and server sides	0.000 sec. So we need to activate the option to charge the data locally so we use **MySQL Command Line**.
+
+First we get into the directory where we installed MySQL under the bin of the Server file, we execute this ligne to  access the  MySQL monitor and connecting threw the user just created and it's pwd from the installation : mysql -u root -p
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/62c38593-ca7b-4b9f-bc4d-4cf858814ed3)
 
-to show the database and the empy table that we created earlier
+to show the database and the empty table that we created earlier : show database;
+                                                                   select * from spark_db.orders;
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/4b7e4fe7-514e-4797-98d6-79aa3e945007)
 
