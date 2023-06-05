@@ -56,3 +56,9 @@ PySpark supports two types of Data Abstractions:
 Execute Spark on cmd : spark-shell
 
 ### Spark & MySQL
+Download the Community (GPL) version of MySQL for Windows from the link : https://dev.mysql.com/downloads/file/?id=518835
+Then create the "root" account while installing to test the first conncetion
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/e44d085e-e1c2-4289-b733-37d07b5e1fd7)
+
+
+
