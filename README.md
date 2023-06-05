@@ -54,3 +54,5 @@ PySpark supports two types of Data Abstractions:
               - Value: C:\..\spark\Hadoop\bin
               
 Execute Spark on cmd : spark-shell
+
+### Spark & MySQL
