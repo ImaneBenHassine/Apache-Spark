@@ -111,6 +111,11 @@ First we get into the directory where we installed MySQL under the bin of the Se
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/62c38593-ca7b-4b9f-bc4d-4cf858814ed3)
 
 to show the database and the empty table that we created earlier : show database;
+
                                                                    select * from spark_db.orders;
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/4b7e4fe7-514e-4797-98d6-79aa3e945007)
+
+To activate the option of loading the data in local we need to set up the variable **local_infile** to **'ON'**
+
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/d06c1775-5dae-4dc3-aaeb-88d68a00d612)
 
