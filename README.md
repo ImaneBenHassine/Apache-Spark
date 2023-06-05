@@ -27,6 +27,8 @@ PySpark supports two types of Data Abstractions:
               - Variable: PATH
               - Value: %JAVA_HOME%\bin
      
+   ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/23de67b8-b6c7-41ba-bcba-931b0355f9ef)
+  
    #### 1.2 Install Spark 
    Download spark-3.4.0-bin-hadoop3 from the following link: http://spark.apache.org/downloads.html and extract it.
    
@@ -52,13 +54,23 @@ PySpark supports two types of Data Abstractions:
          ii. System variable:
               - Variable: PATH
               - Value: %HADOOP_HOME%\bin
-              
-Execute Spark on cmd : spark-shell
+ 
+#### 1.4 Launch Spark
+Open a new command-prompt window using the right-click and Run as administrator, go to spark directory " cd C:\..\bin " then execute : **spark-shell.cmd**
+
+If the environment path was correctly setted, the system should display several lines indicating the status of the application. You may get a Java pop-up. Select Allow access to continue.
+
+Finally, the Spark logo appears, and the prompt displays the Scala shell !
+
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/9b882c24-d4be-4ef4-9d41-3023330e0bed)
+
 
 ### Spark & MySQL
 Download the Community (GPL) version of MySQL for Windows from the link : https://dev.mysql.com/downloads/file/?id=518835
-Then create the "root" account while installing to test the first conncetion
+
+Then create the "root" account while installing to test the first conncetion !
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/e44d085e-e1c2-4289-b733-37d07b5e1fd7)
 
+Now we need to creta a "user" account so we can have acces to the database
 
 
