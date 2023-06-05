@@ -106,16 +106,30 @@ LOAD DATA
      
 but we have an Error Code: 3948. Loading local data is disabled; this must be enabled on both the client and server sides	0.000 sec. So we need to activate the option to charge the data locally so we use **MySQL Command Line**.
 
-First we get into the directory where we installed MySQL under the bin of the Server file, we execute this ligne to  access the  MySQL monitor and connecting threw the user just created and it's pwd from the installation : mysql -u root -p
+First we get into the directory where we installed MySQL under the bin of the Server file, we execute this ligne to  access the  MySQL monitor and connecting with the administrator account and it's pwd created from the installation : mysql -u root -p
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/62c38593-ca7b-4b9f-bc4d-4cf858814ed3)
 
-to show the database and the empty table that we created earlier : show database;
+to show the database and the empty table that we created earlier : 
 
-                                                                   select * from spark_db.orders;
+    show database;
+    select * from spark_db.orders;
+
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/4b7e4fe7-514e-4797-98d6-79aa3e945007)
 
-To activate the option of loading the data in local we need to set up the variable **local_infile** to **'ON'**
+To activate the option of loading the data in local  we need to set up the variable **local_infile** to **'ON'** instead of  **'OFF'**
+
+mysql> set global local_infile=1;
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/d06c1775-5dae-4dc3-aaeb-88d68a00d612)
 
+this was side **Client**!
+Now let's change it side **Server**. So we exist anr reconnect to MySql but considering the **local_infile** set to **'ON'** before connecting to the root and typing the passeword :
+
+   mysql --local-infile=1 -u root -p
+
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/2d1b26af-d147-44e7-ba6a-348777645fdd)
+
+let's execute the load query :
+
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/8f349267-d131-40be-b148-8f73b85551b1)
