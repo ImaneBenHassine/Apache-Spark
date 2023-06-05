@@ -133,3 +133,8 @@ Now let's change it side **Server**. So we exist anr reconnect to MySql but cons
 let's execute the load query :
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/8f349267-d131-40be-b148-8f73b85551b1)
+
+and the table is loaded !
+
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/350112ed-5f2a-4038-9acc-a9ffb452735b)
+
