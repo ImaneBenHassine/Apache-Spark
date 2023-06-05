@@ -93,6 +93,22 @@ then we add the user and we grant all the previleges on thid databse to the new 
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/7c5cabbb-b6fc-4bcd-a23c-7026d4c68469)
 
+Then we create our first table :
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/7d0db253-3935-4efd-9f5f-8fe2b1f0f5c1)
 
+Now we charge the data using :
+LOAD DATA 
+     LOCAL INFILE 'C://Users//MonPC//Desktop//01-ImenBH//Projects//PySpark//datasets//Orders.csv'
+     INTO TABLE orders
+     fields terminated by ','
+     lines terminated by '\r\n'
+     ignore 1 lines;
+     
+but we have an Error Code: 3948. Loading local data is disabled; this must be enabled on both the client and server sides	0.000 sec. So we need to activate th we use **MySQL Command Line** : 
+mysql -u root -p
 
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/62c38593-ca7b-4b9f-bc4d-4cf858814ed3)
+
+to show the database and the empy table that we created earlier
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/4b7e4fe7-514e-4797-98d6-79aa3e945007)
 
