@@ -76,12 +76,23 @@ Then, we can view the file contents by using this command to call an action whic
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/c29ae7f4-53ce-4be4-95cf-39367d02e877)
 
-### Spark & MySQL
+### 2. Spark & MySQL
 Download the Community (GPL) version of MySQL for Windows from the link : https://dev.mysql.com/downloads/file/?id=518835
 
 Then create the "root" account while installing to test the first conncetion !
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/e44d085e-e1c2-4289-b733-37d07b5e1fd7)
 
-Now we need to creta a "user" account so we can have acces to the database
+Now we need to creta a "user" account so we can have access to the database.
+
+#### 2.1 Create User & DataBase 
+here we create a new databse:
+
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/d30b34f7-3bf2-4f23-8301-f22df2dee8b0)
+
+then we add the user and we grant all the previleges on thid databse to the new user already created
+
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/7c5cabbb-b6fc-4bcd-a23c-7026d4c68469)
+
+
 
 
