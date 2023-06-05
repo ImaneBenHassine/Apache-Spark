@@ -69,7 +69,12 @@ Open a web browser and navigate to http://desktop-o58pauc:4040
 
 #### 1.5 Test Spark
 
-Let's use Scala to read the contents of a file and create a "test" text.
+Let's use Scala to read the contents of a file such as the README file in the Spark directory.
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/4f0fbb8a-ef5f-4674-a47b-288e615bffe9)
+
+
+Or create a "test" text.
+
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/390203ab-ea74-42ab-8b5c-a893bc9a8af8)
 
 the output shows an RDD is created
