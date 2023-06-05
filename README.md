@@ -72,7 +72,7 @@ Open a web browser and navigate to http://desktop-o58pauc:4040
 Let's use Scala to read the contents of a file such as the README file in the Spark directory.
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/4f0fbb8a-ef5f-4674-a47b-288e615bffe9)
 
-Then, we can view the file contents by using this command to call an action : r.take(11).foreach(println)
+Then, we can view the file contents by using this command to call an action which instructs Spark to print 11 lines from the file you specified **r.take(11).foreach(println)**
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/c29ae7f4-53ce-4be4-95cf-39367d02e877)
 
