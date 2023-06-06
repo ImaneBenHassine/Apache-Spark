@@ -153,3 +153,9 @@ First, open Jupyter Notebook First, with starting the Spark session, we will als
 https://mvnrepository.com/artifact/mysql/mysql-connector-java
 
 For downloading and installing any packages, we need to use the below config
+
+https://dev.mysql.com/downloads/connector/j/
+
+
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/0a8e0aa0-aca3-4bf2-bb01-36cf178b099f)
+
