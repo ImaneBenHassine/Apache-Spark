@@ -56,7 +56,9 @@ PySpark supports two types of Data Abstractions:
               - Value: %HADOOP_HOME%\bin
  
 #### 1.4 Launch Spark
-Open a new command-prompt window using the right-click and Run as administrator, go to spark directory " cd C:\..\bin " then execute : **spark-shell.cmd**
+Open a new command-prompt window using the right-click and Run as administrator, go to spark directory " cd C:\..\bin " then execute : 
+    
+       spark-shell.cmd
 
 If the environment path was correctly setted, the system should display several lines indicating the status of the application. You may get a Java pop-up. Select Allow access to continue.
 
@@ -72,7 +74,9 @@ Open a web browser and navigate to http://desktop-o58pauc:4040
 Let's use Scala to read the contents of a file such as the README file in the Spark directory.
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/4f0fbb8a-ef5f-4674-a47b-288e615bffe9)
 
-Then, we can view the file contents by using this command to call an action which instructs Spark to print 11 lines from the file you specified **r.take(11).foreach(println)**
+Then, we can view the file contents by using this command to call an action which instructs Spark to print 11 lines from the file you specified 
+
+       r.take(11).foreach(println)
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/c29ae7f4-53ce-4be4-95cf-39367d02e877)
 
@@ -121,14 +125,14 @@ to show the database and the empty table that we created earlier :
 
 To activate the option of loading the data in local  we need to set up the variable **local_infile** to **'ON'** instead of  **'OFF'**
 
-mysql> set global local_infile=1;
+     mysql> set global local_infile=1;
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/d06c1775-5dae-4dc3-aaeb-88d68a00d612)
 
 this was side **Client**!
 Now let's change it side **Server**. So we exist anr reconnect to MySql but considering the **local_infile** set to **'ON'** before connecting to the root and typing the passeword :
 
-   mysql --local-infile=1 -u root -p
+     mysql --local-infile=1 -u root -p
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/2d1b26af-d147-44e7-ba6a-348777645fdd)
 
