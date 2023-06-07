@@ -161,14 +161,14 @@ https://dev.mysql.com/downloads/connector/j/
 
 ##### Pyspark read JDBC
 
-JDBC is a Java standard to connect to any database with the right JDBC connector jar in the classpath and provide a JDBC driver using the JDBC API. So we will be using the **pyspark.read.jdbc()** methods, to connect to the MySQL database, and reading a JDBC table to PySpark DataFrame by using PySpark with MySQL connector breaking into 4 steps :
+**JDBC** is a Java standard to connect to any database with the right JDBC connector jar in the classpath and provide a JDBC driver using the JDBC API. So we will be using the **pyspark.read.jdbc()** methods, to connect to the MySQL database, and reading a JDBC table to PySpark DataFrame by using PySpark with MySQL connector breaking into 4 steps :
 
 1. Identify the JDBC Connector to use
 2. Add the dependency
 3. Create SparkSession with database dependency
 4. Read JDBC Table to PySpark Dataframe
 
-To read a table using jdbc() method,we will need a :
+To read a table using **jdbc()** method,we will need a :
 
            - driver
            - server ip
@@ -177,4 +177,5 @@ To read a table using jdbc() method,we will need a :
            - table
            - user
            - password
-           
+ 
+The connector **mysql-connector-java.jar** and the driver is **com.mysql.jdbc.Driver** .   
