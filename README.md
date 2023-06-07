@@ -103,12 +103,12 @@ Then we create our first table :
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/7d0db253-3935-4efd-9f5f-8fe2b1f0f5c1)
 
 Now we charge the data using :
-LOAD DATA 
-     LOCAL INFILE 'C://Users//MonPC//Desktop//01-ImenBH//Projects//PySpark//datasets//Orders.csv'
-     INTO TABLE orders
-     fields terminated by ','
-     lines terminated by '\r\n'
-     ignore 1 lines;
+      LOAD DATA 
+         LOCAL INFILE 'C://..//Orders.csv'
+         INTO TABLE orders
+         fields terminated by ','
+         lines terminated by '\r\n'
+         ignore 1 lines;
      
 but we have an Error Code: 3948. Loading local data is disabled; this must be enabled on both the client and server sides	0.000 sec. So we need to activate the option to charge the data locally so we use **MySQL Command Line**.
 
