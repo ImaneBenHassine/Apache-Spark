@@ -22,7 +22,7 @@ PySpark supports two types of Data Abstractions:
    
          i. User variable:
               - Variable: JAVA_HOME
-              - Value: C:\Program Files\Java\jdk
+              - Value: C:\Java\
          ii. System variable:
               - Variable: PATH
               - Value: %JAVA_HOME%\bin
@@ -103,6 +103,7 @@ Then we create our first table :
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/7d0db253-3935-4efd-9f5f-8fe2b1f0f5c1)
 
 Now we charge the data using :
+
       LOAD DATA 
          LOCAL INFILE 'C://..//Orders.csv'
          INTO TABLE orders
@@ -112,7 +113,9 @@ Now we charge the data using :
      
 but we have an Error Code: 3948. Loading local data is disabled; this must be enabled on both the client and server sides	0.000 sec. So we need to activate the option to charge the data locally so we use **MySQL Command Line**.
 
-First we get into the directory where we installed MySQL under the bin of the Server file, we execute this ligne to  access the  MySQL monitor and connecting with the administrator account and it's pwd created from the installation : mysql -u root -p
+First we get into the directory where we installed MySQL under the bin of the Server file, we execute this ligne to  access the  MySQL monitor and connecting with the administrator account and it's pwd created from the installation :
+
+        mysql -u root -p
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/62c38593-ca7b-4b9f-bc4d-4cf858814ed3)
 
