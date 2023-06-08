@@ -180,5 +180,17 @@ First, open Jupyter Notebook First, with starting the Spark session, we will als
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/0a8e0aa0-aca3-4bf2-bb01-36cf178b099f)
 
+Once the connector is downloaded, we store it in the spark folder, we may have to add the path of the **.jar** file to **CLASSPATH** to avoid having this Error :
+       
+       py4j.protocol.Py4JJavaError: An error occurred while calling o27.load.
+       : java.lang.ClassNotFoundException: com.mysql.jdbc.Driver
+     
+ Create the spark session and add the configuration of the connector:
+ 
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/edd9eab5-6341-4d20-a203-b0a516a1b870)
+
+ with read() we need to provide the driver and the MySQL connection details. In the below example, I am reading a table orders from the database spark_db to the DataFrame.
+ 
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/e5ad123d-5c94-4814-a753-88c4ea9ba2c1)
 
 
