@@ -149,40 +149,36 @@ and the table is loaded !
 
 #### 2.3 Create Connection
 
-##### Prerequisites
-- Install required spark libraries
-- Create connection with SQL Database
-
-If we go to the Jars folder and list all the Jar files C:\..\jars>dir , we will find that we don’t have packages installed for MySQL.
-
-First, open Jupyter Notebook First, with starting the Spark session, we will also download and install MySQL Packages from Maven. You can check all the packages from Maven using this link
-
-https://mvnrepository.com/artifact/mysql/mysql-connector-java
-
-For downloading and installing any packages, we need to use the below config
-
-https://dev.mysql.com/downloads/connector/j/
-
-
-![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/0a8e0aa0-aca3-4bf2-bb01-36cf178b099f)
-
-##### Pyspark read JDBC
-
-**JDBC** is a Java standard to connect to any database with the right JDBC connector jar in the classpath and provide a JDBC driver using the JDBC API. So we will be using the **pyspark.read.jdbc()** methods, to connect to the MySQL database, and reading a JDBC table to PySpark DataFrame by using PySpark with MySQL connector breaking into 4 steps :
+In order to connect to MySQL server from Spark, we need to :
 
 1. Identify the JDBC Connector to use
 2. Add the dependency
 3. Create SparkSession with database dependency
 4. Read JDBC Table to PySpark Dataframe
 
-To read a table using **jdbc()** method,we will need a :
+##### Pyspark read JDBC
 
-           - driver
-           - server ip
-           - port
-           - database name
-           - table
-           - user
-           - password
+A **JDBC** is a Java standard to connect to any database with the right JDBC connector jar in the classpath and provide a JDBC driver using the JDBC API. So we will be using the **pyspark.read.jdbc()** methods, to connect to the MySQL database, and reading a JDBC table to PySpark DataFrame by using PySpark with MySQL connector.
+
+To read a table using **jdbc()** method,we will need to provide :
+
+- MySQL server address & port
+- Driver
+- Database name
+- Table name
+- User name and Password
  
-The connector **mysql-connector-java.jar** and the driver is **com.mysql.jdbc.Driver** .   
+The connector **mysql-connector-java.jar** and the driver is **com.mysql.jdbc.Driver** . 
+
+Now if we go to the Jars folder and list all the Jar files C:\..\jars>dir , we will find that we don’t have packages installed for MySQL. So we download the package from :
+
+        https://dev.mysql.com/downloads/connector/j/
+        
+Ps: To check all the packages from Maven using this link :  https://mvnrepository.com/artifact/mysql/mysql-connector-java
+
+First, open Jupyter Notebook First, with starting the Spark session, we will also download and install MySQL Packages from Maven. 
+
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/0a8e0aa0-aca3-4bf2-bb01-36cf178b099f)
+
+
+
