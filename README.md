@@ -81,6 +81,7 @@ Then, we can view the file contents by using this command to call an action whic
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/c29ae7f4-53ce-4be4-95cf-39367d02e877)
 
 ### 2. Spark & MySQL
+
 #### 2.1 Install MySQL
 
 Download the Community (GPL) version of MySQL for Windows from the link : https://dev.mysql.com/downloads/file/?id=518835
@@ -192,5 +193,20 @@ Once the connector is downloaded, we store it in the spark folder, we may have t
  With read() we need to provide the driver and the MySQL connection details. In the below example, I am reading a table orders from the database spark_db to the DataFrame.
  
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/e5ad123d-5c94-4814-a753-88c4ea9ba2c1)
+
+#### Write PySpark DataFrame to MySQL Database Table
+
+Same to reading we need to provide the MySQL server & database details while writing PySpark DataFrame to the table. Use the format() to specify the driver already efined in the MySQL connector dependency. There are different modes to writing :
+
+- **overwrite:**  drops the table if already exists by default and re-creates a new one without indexes.
+- **truncate true:** to retain the index.
+
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/88b3a31d-9d50-4b2e-ad96-43e4143c9b24)
+
+here the dataframe is created and save it in a new table on the database MySQL :
+
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/00c7d30c-5c90-4751-aa5c-8c332b059d80)
+
+
 
 
