@@ -88,6 +88,8 @@ Then, we can view the file contents by using this command to call an action whic
 
 ### 2. Spark & MySQL
 
+[The code on Jupyter Notebook](https://github.com/ImaneBenHassine/Apache-Spark/blob/main/SparkETL/Spark%20%26%20MySQL.ipynb)
+
 #### 2.1 Install MySQL
 
 Download the Community (GPL) version of MySQL for Windows from the link : https://dev.mysql.com/downloads/file/?id=518835
