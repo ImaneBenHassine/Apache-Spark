@@ -188,7 +188,7 @@ Once the connector is downloaded, we store it in the spark folder, we may have t
      
  Create the spark session and add the configuration of the connector:
  
-![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/b9bb686f-c9f1-4864-a6d3-6db40d39bd00)
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/c293a298-ef79-4e0c-a0bd-c4ed42bdfeb6)
 
  With read() we need to provide the driver and the MySQL connection details. In the below example, I am reading a table orders from the database spark_db to the DataFrame.
  
