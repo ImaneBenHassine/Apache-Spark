@@ -157,7 +157,7 @@ In order to connect to MySQL server from Spark, we need to :
 3. Create SparkSession with database dependency
 4. Read JDBC Table to PySpark Dataframe
 
-##### Pyspark read JDBC
+#### 2.4 Pyspark read JDBC
 
 A **JDBC** is a Java standard to connect to any database with the right JDBC connector jar in the classpath and provide a JDBC driver using the JDBC API. So we will be using the **pyspark.read.jdbc()** methods, to connect to the MySQL database, and reading a JDBC table to PySpark DataFrame by using PySpark with MySQL connector.
 
@@ -194,7 +194,7 @@ Once the connector is downloaded, we store it in the spark folder, we may have t
  
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/e5ad123d-5c94-4814-a753-88c4ea9ba2c1)
 
-#### Write PySpark DataFrame to MySQL Database Table
+### 2.5  Write PySpark DataFrame to MySQL Database Table
 
 Same to reading we need to provide the MySQL server & database details while writing PySpark DataFrame to the table. Use the format() to specify the driver already efined in the MySQL connector dependency. There are different modes to writing :
 
