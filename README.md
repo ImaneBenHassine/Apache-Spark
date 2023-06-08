@@ -203,7 +203,7 @@ Same to reading we need to provide the MySQL server & database details while wri
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/88b3a31d-9d50-4b2e-ad96-43e4143c9b24)
 
-here the dataframe is created and save it in a new table on the database MySQL :
+It created a new table and loaded data into table in the database of MySQL :
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/00c7d30c-5c90-4751-aa5c-8c332b059d80)
 
