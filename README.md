@@ -88,7 +88,7 @@ Then, we can view the file contents by using this command to call an action whic
 
 ### 2. Spark & MySQL
 
-[The code on Jupyter Notebook](https://github.com/ImaneBenHassine/Apache-Spark/blob/main/SparkETL/Spark%20%26%20MySQL.ipynb)
+[The PySpark code on Jupyter Notebook](https://github.com/ImaneBenHassine/Apache-Spark/blob/main/SparkETL/Spark%20%26%20MySQL.ipynb)
 
 #### 2.1 Install MySQL
 
@@ -216,5 +216,30 @@ It created a new table and loaded data into table in the database of MySQL :
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/00c7d30c-5c90-4751-aa5c-8c332b059d80)
 
 
+### 2. Spark & PostgreSQL
 
+[The PySpark code on Jupyter Notebook]()
+
+#### 2.1 Install PostgreSQL
+
+The interactive installer by EnterpriseDB is designed to make it quick and simple to install PostgreSQL on your computer, here is the link : https://www.enterprisedb.com/downloads/postgres-postgresql-downloads 
+
+As show by the image below using the **pslq shell** just pressing enter,  the installation is finished plus we only have the default databases.
+
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/15a11f2c-2510-4d13-b7c7-37e6c05233b9)
+
+#### 2.2 Create DataBase 
+
+We can create the database by pgAdmin or by the Sql Shell typing : 
+      
+      CREATE DATABASE Spark_db ;
+      
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/de1cbccd-c17e-48f4-baa2-6910e001318a)
+
+To access to the database : 
+
+       \c Spark_db
+
+Now we create the table :
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/a1923195-6c6c-4c01-a93c-623688cfceac)                ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/889c2129-6d96-4211-bf3c-4e80e248e7c2)
 
