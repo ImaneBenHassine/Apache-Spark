@@ -246,10 +246,11 @@ Now we create the table :
        
 to view the table :  
 
-          \d  or \dt   without the sequence 
+          \d  or \dt  (without the sequence)
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/0257d3b4-878f-478b-a013-ed1f5ae57b28)
 
 the table is loaded
+
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/c48b7d5a-2234-4313-84a8-b0768b97737b)
 
