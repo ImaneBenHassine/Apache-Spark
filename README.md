@@ -189,7 +189,7 @@ First, open Jupyter Notebook First, with starting the Spark session, we will als
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/0a8e0aa0-aca3-4bf2-bb01-36cf178b099f)
 
-Once the connector is downloaded, we store it in the spark folder, we may have to add the path of the **.jar** file to **CLASSPATH** to avoid having this Error :
+Once the connector is downloaded, we store it in the spark folder, we may have to add the path of the **.jar** file to **CLASSPATH** and restart the laptop to avoid having this Error :
        
        py4j.protocol.Py4JJavaError: An error occurred while calling o27.load.
        : java.lang.ClassNotFoundException: com.mysql.jdbc.Driver
@@ -254,3 +254,4 @@ the table is loaded
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/c48b7d5a-2234-4313-84a8-b0768b97737b)
 
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/acb31517-bc7a-4839-afab-74e09f7e07c9)
