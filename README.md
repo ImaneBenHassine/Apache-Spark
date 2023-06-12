@@ -242,9 +242,14 @@ To access to the database :
 
 Now we create the table :
 
-![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/a1923195-6c6c-4c01-a93c-623688cfceac)               
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/6cee5bd8-cde4-4e8e-a2a2-c00906819e02)
+       
+to view the table :  
 
-to view the table :   \d  or \dt without the sequence 
+          \d  or \dt   without the sequence 
 
-![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/889c2129-6d96-4211-bf3c-4e80e248e7c2)
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/0257d3b4-878f-478b-a013-ed1f5ae57b28)
+
+the table is loaded
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/c48b7d5a-2234-4313-84a8-b0768b97737b)
 
