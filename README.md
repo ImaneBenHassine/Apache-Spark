@@ -104,7 +104,7 @@ here we create a new databse:
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/d30b34f7-3bf2-4f23-8301-f22df2dee8b0)
 
-then we add the user and we grant all the previleges on thid databse to the new user already created
+then we add the user and we grant all the previleges on this databse to the new user already created
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/7c5cabbb-b6fc-4bcd-a23c-7026d4c68469)
 
@@ -195,10 +195,10 @@ Once the connector is downloaded, we store it in the spark folder, we may have t
        : java.lang.ClassNotFoundException: com.mysql.jdbc.Driver
      
  Create the spark session and add the configuration of the connector:
- 
+
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/c293a298-ef79-4e0c-a0bd-c4ed42bdfeb6)
 
- With read() we need to provide the driver and the MySQL connection details. In the below example, I am reading a table orders from the database spark_db to the DataFrame.
+With read() we need to provide the driver and the MySQL connection details. In the below example, I am reading a table orders from the database spark_db to the DataFrame.
  
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/ea82d0b3-e5be-4dbf-85d5-ce798e5dfbce)
 
@@ -228,7 +228,7 @@ As show by the image below using the **pslq shell** just pressing enter,  the in
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/15a11f2c-2510-4d13-b7c7-37e6c05233b9)
 
-#### 2.2 Create DataBase 
+#### 2.2 Create DataBase, table
 
 We can create the database by pgAdmin or by the Sql Shell typing : 
       
@@ -241,5 +241,10 @@ To access to the database :
        \c Spark_db
 
 Now we create the table :
-![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/a1923195-6c6c-4c01-a93c-623688cfceac)                ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/889c2129-6d96-4211-bf3c-4e80e248e7c2)
+
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/a1923195-6c6c-4c01-a93c-623688cfceac)               
+
+to view the table :   \d  or \dt without the sequence 
+
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/889c2129-6d96-4211-bf3c-4e80e248e7c2)
 
