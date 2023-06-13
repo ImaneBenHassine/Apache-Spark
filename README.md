@@ -218,7 +218,7 @@ It created a new table and loaded data into table in the database of MySQL :
 
 ### 2. Spark & PostgreSQL
 
-[The PySpark code on Jupyter Notebook]()
+[The PySpark code on Jupyter Notebook](https://github.com/ImaneBenHassine/Apache-Spark/blob/main/SparkETL/Spark%20%26%20PostgreSQL.ipynb)
 
 #### 2.1 Install PostgreSQL
 
