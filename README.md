@@ -254,4 +254,6 @@ the table is loaded
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/c48b7d5a-2234-4313-84a8-b0768b97737b)
 
+We need to download the PostgreSQL JDBC Driver from Maven using this link :  https://mvnrepository.com/artifact/org.postgresql/postgresql/42.6.0
+
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/acb31517-bc7a-4839-afab-74e09f7e07c9)
