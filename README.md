@@ -268,7 +268,6 @@ then we read the table from PostgreSQL using Spark:
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/cfa276a2-10b2-4619-ace9-9a74340ee14a)
 
 After we create Hive table and do transformation.
-
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/bb4b2164-c5dc-4f4b-a606-ceba7c611e7c)
 
 Finnaly we load the new table into PostgreSql from Spark using Write.
