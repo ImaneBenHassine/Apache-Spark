@@ -18,6 +18,7 @@ PySpark supports two types of Data Abstractions:
    1. Installing Spark
    2. Spark & MySQL
    3. Spark & PostgreSQL
+   4. Spark & MongoDB
    
    
 ### 1. Installing Spark on Windows 10
@@ -216,11 +217,11 @@ It created a new table and loaded data into table in the database of MySQL :
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/00c7d30c-5c90-4751-aa5c-8c332b059d80)
 
 
-### 2. Spark & PostgreSQL
+### 3. Spark & PostgreSQL
 
 [The PySpark code on Jupyter Notebook](https://github.com/ImaneBenHassine/Apache-Spark/blob/main/SparkETL/Spark%20%26%20PostgreSQL.ipynb)
 
-#### 2.1 Install PostgreSQL
+#### 3.1 Install PostgreSQL
 
 The interactive installer by EnterpriseDB is designed to make it quick and simple to install PostgreSQL on your computer, here is the link : https://www.enterprisedb.com/downloads/postgres-postgresql-downloads 
 
@@ -228,7 +229,7 @@ As show by the image below using the **pslq shell** just pressing enter,  the in
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/15a11f2c-2510-4d13-b7c7-37e6c05233b9)
 
-#### 2.2 Create DataBase, table
+#### 3.2 Create DataBase, table
 
 We can create the database by pgAdmin or by the Sql Shell typing : 
       
@@ -275,3 +276,30 @@ Finnaly we load the new table into PostgreSql from Spark using Write.
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/6ece615c-d07f-4d84-a8ca-eb8c9768eff2)
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/1dc140f3-d00e-4ab2-a084-831cd3fba49c)
+
+### 4. Spark & MongoDB
+
+[The PySpark code on Jupyter Notebook]()
+
+#### 4.1 Install MongoDB
+
+Download the MongoDB Community Server from this link : https://www.mongodb.com/try/download/community
+
+As seen **"mongo"** is not recognized as internal or external an a command, so that's why we need to dowload the **shel** separately throw the link :https://www.mongodb.com/try/download/shell and extract it inside the Mongodb directory.
+
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/7350f4cb-5e79-477f-8053-1a7214c62fee)
+
+ Now we need to add the bin directory path of the shell to the path of the variable system, restart the command line and type :
+  
+      mongosh
+      
+ ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/2bc1b374-8487-498f-9f9e-92386a069e79)
+
+#### 4.2 Create DataBase, table
+#### 4.3  Write PySpark DataFrame to MongoDB Database Table
+
+
+
+
+
+
