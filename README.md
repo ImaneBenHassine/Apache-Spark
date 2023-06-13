@@ -257,3 +257,21 @@ the table is loaded
 We need to download the PostgreSQL JDBC Driver from Maven using this link :  https://mvnrepository.com/artifact/org.postgresql/postgresql/42.6.0
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/acb31517-bc7a-4839-afab-74e09f7e07c9)
+
+Once we install and download Spark Packages , we create connection with PostgreSQL.
+
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/e55a8416-ec25-474b-a08e-c5a30ba1e099)
+
+then we read the table from PostgreSQL using Spark:
+
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/cfa276a2-10b2-4619-ace9-9a74340ee14a)
+
+After we create Hive table and do transformation.
+
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/bb4b2164-c5dc-4f4b-a606-ceba7c611e7c)
+
+Finnaly we load the new table into PostgreSql from Spark using Write.
+
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/6ece615c-d07f-4d84-a8ca-eb8c9768eff2)
+
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/1dc140f3-d00e-4ab2-a084-831cd3fba49c)
