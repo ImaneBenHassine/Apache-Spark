@@ -280,6 +280,9 @@ Finnaly we load the new table into PostgreSql from Spark using Write.
 
 [The PySpark code on Jupyter Notebook]()
 
+MongoDB is a **document-oriented NOSQL** database used for handling Big Data. Unlike tabular format in the conventional relational databases MongoDB uses **collections** and **documents**
+
+
 #### 4.1 Install MongoDB
 
 Download the MongoDB Community Server from this link : https://www.mongodb.com/try/download/community
@@ -294,7 +297,7 @@ As seen **"mongo"** is not recognized as internal or external an a command, so t
       
  ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/2bc1b374-8487-498f-9f9e-92386a069e79)
 
-#### 4.2 Create DataBase, table
+#### 4.2 Create DataBase, collection
 #### 4.3  Write PySpark DataFrame to MongoDB Database Table
 
 
