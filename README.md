@@ -98,6 +98,20 @@ IntelliJ IDEA is the most used IDE to run Spark applications written in Scala du
 
 We can download the community edition **IntelliJ IDEA community** following this link : https://www.jetbrains.com/idea/download/?section=windows#section=windows
 
+#### 2.2 Install Scala Plugin
+
+From the Plugins option from the left panel we install  the **Scala** plugin and then restart the IntelliJ IDE.
+
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/9d56a3bb-dba4-4c30-b838-1ee1eb95952f)
+
+#### 2.3 Create a Scala project In IntelliJ
+We select a New Project from **Maven** generators then we select **org.scala-tools.archetypes:scala-archetypes-simple** as the archetype which is a template that creates the right directory structure and downloads the required default dependencies. Since we have selected Scala archetypes, it downloads all Scala dependencies and enables IntelliJ to write Scala code. Then we select our JDK sinc Scala is a JVM language so it will need it to run ,to compile & execute..
+
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/207a8e9b-ec8a-4a44-99f5-60a13bd1987e)
+
+So this creates a project on IntelliJ and if we expand the project we can see App.scala file.
+
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/ea1c1762-86ef-434b-b248-1dbb8b9ad8bc)
 
 
 
