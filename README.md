@@ -115,13 +115,15 @@ So this creates a project on IntelliJ and if we expand the project we can see Ap
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/ea1c1762-86ef-434b-b248-1dbb8b9ad8bc)
 
 #### 2.3 Setup Scala SDK
-Now we need to intsall Scala SDK by right click on the project then ** Add Framework Suport**
+Now we need to intsall Scala SDK by right click on the project then **Add Framework Suport**
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/45cdb426-1668-4f3c-84e7-bca7cbccce5b)
 
 As we can see we can't find **Scala**  in the list of the desired technologies so we need to add Scala SDK as a Global library for the project.
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/817ff652-c673-49a2-9f0a-114fc2648488)
+
+
 
 
 
