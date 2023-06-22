@@ -67,7 +67,7 @@ Open a new command-prompt window using the right-click and Run as administrator,
     
        spark-shell.cmd
 
-Or using ** spark-submi.cmd**, adapted more for the production deployment
+Or using **spark-submit.cmd** , adapted more for the production deployment
 
 If the environment path was correctly setted, the system should display several lines indicating the status of the application. You may get a Java pop-up. Select Allow access to continue.
 
