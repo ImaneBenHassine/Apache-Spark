@@ -105,13 +105,24 @@ From the Plugins option from the left panel we install  the **Scala** plugin and
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/9d56a3bb-dba4-4c30-b838-1ee1eb95952f)
 
 #### 2.3 Create a Scala project In IntelliJ
-We select a New Project from **Maven** generators then we select **org.scala-tools.archetypes:scala-archetypes-simple** as the archetype which is a template that creates the right directory structure and downloads the required default dependencies. Since we have selected Scala archetypes, it downloads all Scala dependencies and enables IntelliJ to write Scala code. Then we select our JDK sinc Scala is a JVM language so it will need it to run ,to compile & execute..
+
+We select a New Project from **Maven** generators then we select **org.scala-tools.archetypes:scala-archetypes-simple** as the archetype which is a template that creates the right directory structure and downloads the required default dependencies. Since we have selected Scala archetypes, it downloads all Scala dependencies and enables IntelliJ to write Scala code. Then we select our JDK since Scala is a JVM language so it will need it to run ,to compile & execute..
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/207a8e9b-ec8a-4a44-99f5-60a13bd1987e)
 
 So this creates a project on IntelliJ and if we expand the project we can see App.scala file.
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/ea1c1762-86ef-434b-b248-1dbb8b9ad8bc)
+
+#### 2.3 Setup Scala SDK
+Now we need to intsall Scala SDK by right click on the project then ** Add Framework Suport**
+
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/45cdb426-1668-4f3c-84e7-bca7cbccce5b)
+
+As we can see we can't find **Scala**  in the list of the desired technologies so we need to add Scala SDK as a Global library for the project.
+
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/817ff652-c673-49a2-9f0a-114fc2648488)
+
 
 
 
