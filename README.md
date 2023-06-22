@@ -123,6 +123,10 @@ As we can see we can't find **Scala**  in the list of the desired technologies s
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/817ff652-c673-49a2-9f0a-114fc2648488)
 
+And now we can add Scala as a framework support 
+
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/48c1a903-c18d-4d32-bedf-0d0578a28641)
+
 
 
 
