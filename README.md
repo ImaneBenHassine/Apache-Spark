@@ -16,9 +16,10 @@ PySpark supports two types of Data Abstractions:
 ## Steps 
 
    1. Installing Spark
-   2. Spark & MySQL
-   3. Spark & PostgreSQL
-   4. Spark & MongoDB
+   2. Installing & configurating Intellij
+   3. Spark & MySQL
+   4. Spark & PostgreSQL
+   5. Spark & MongoDB
    
    
 ### 1. Installing Spark on Windows 10
@@ -88,6 +89,19 @@ Then, we can view the file contents by using this command to call an action whic
        r.take(11).foreach(println)
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/c29ae7f4-53ce-4be4-95cf-39367d02e877)
+
+### 2. Installing & configurating Intellij
+
+IntelliJ IDEA is the most used IDE to run Spark applications written in Scala due to its good Scala code completion.
+
+#### 2.1 Setup IntelliJ IDEA for Spark
+
+We can download the community edition **IntelliJ IDEA community** following this link : https://www.jetbrains.com/idea/download/?section=windows#section=windows
+
+
+
+
+
 
 ### 2. Spark & MySQL
 
