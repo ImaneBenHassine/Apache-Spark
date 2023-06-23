@@ -121,11 +121,10 @@ Now we need to intsall Scala SDK by right click on the project then **Add Framew
 
 As we can see we can't find **Scala**  in the list of the desired technologies so we need to add Scala SDK as a Global library for the project.
 
-![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/817ff652-c673-49a2-9f0a-114fc2648488)
-
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/dd30a950-0f2f-48cf-b580-829abcb0ba4a)
 And now we can add Scala as a framework support 
 
-![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/48c1a903-c18d-4d32-bedf-0d0578a28641)
+
 
 
 
