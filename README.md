@@ -114,7 +114,7 @@ So this creates a project on IntelliJ and if we expand the project we can see Ap
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/ea1c1762-86ef-434b-b248-1dbb8b9ad8bc)
 
-#### 2.3 Setup Scala SDK
+#### 2.4 Setup Scala SDK
 Now we need to intsall Scala SDK by right click on the project then **Add Framework Suport**
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/45cdb426-1668-4f3c-84e7-bca7cbccce5b)
@@ -122,8 +122,36 @@ Now we need to intsall Scala SDK by right click on the project then **Add Framew
 As we can see we can't find **Scala**  in the list of the desired technologies so we need to add Scala SDK as a Global library for the project.
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/dd30a950-0f2f-48cf-b580-829abcb0ba4a)
-And now we can add Scala as a framework support 
 
+And now we can add Scala as a framework support.
+
+#### 2.5 Changes to pom.xml file
+
+We start by adjusting the Scala version to the latest version, mine is 2.12.17
+
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/b536327f-9f0a-47f4-bf30-9fd65cd6cee6)
+
+To solve this error  :
+
+             [WARNING] Error injecting: org.apache.maven.report.projectinfo.CiManagementReport java.lang.NoClassDefFoundError: 
+
+we may need to define the maven-site-plugin and the maven-project-info-reports-plugin along with the version numbers in the pom.
+
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/0cb58d86-21e4-41b1-88c0-427637ee769d)
+
+#### 2.6 Add Spark Dependencies to Maven pom.xml File
+            
+We need to add Spark dependencies to pom.xml file such as :
+
+- **Core libraries** for Apache Spark from https://mvnrepository.com/artifact/org.apache.spark/spark-core_2.13/3.4.0
+- **Spark Project SQL** to work with structured data based on DataFrames via : https://mvnrepository.com/artifact/org.apache.spark/spark-sql_2.13/3.4.0.
+- **Spark Project Streaming** from https://mvnrepository.com/artifact/org.apache.spark/spark-streaming_2.13/3.4.0
+
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/7cc495e1-0cf8-4728-8446-e17c195c9c02)
+
+Sometimes, we may need to re-load the dependencies or restart the IntelliJ because it's not automatically loaded . Finally, we can see BUILD SUCCESS as below.
+
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/478b1519-568a-4536-9881-15b347945cdd)
 
 
 
