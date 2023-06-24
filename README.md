@@ -17,9 +17,9 @@ PySpark supports two types of Data Abstractions:
 
    1. Installing Spark
    2. Installing & configurating Intellij
-   3. Spark & MySQL
-   4. Spark & PostgreSQL
-   5. Spark & MongoDB
+   3. PySpark & MySQL
+   4. PySpark & PostgreSQL
+   5. PySpark & MongoDB
    
    
 ### 1. Installing Spark on Windows 10
