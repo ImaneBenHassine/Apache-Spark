@@ -149,15 +149,25 @@ We need to add Spark dependencies to pom.xml file such as :
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/7cc495e1-0cf8-4728-8446-e17c195c9c02)
 
-Sometimes, we may need to re-load the dependencies or restart the IntelliJ because it's not automatically loaded . Finally, we can see BUILD SUCCESS as below.
+Sometimes, we may need to re-load the dependencies or restart the IntelliJ because it's not automatically loaded . Finally, we can see BUILD SUCCESS as below by selecting Maven from the right top corner, then clean install:
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/478b1519-568a-4536-9881-15b347945cdd)
 
-**Note**: we may need to change the JDK to Java 8 instead of the 20 installed previously. Now let's run our first program
+Or we can add the option to automatically download all the dependecies in the **Settings** :
+
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/cbbb055a-0160-41a9-b80b-96f792cb19eb)
+
+**Note** : we may need to change the JDK to Java 8 instead of the 20 installed previously. Now let's run our first program
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/8945a7e6-e3c9-485b-81bb-e7ce91e84c61)
 
+#### 2.7 Deployment with Maven
 
+Scala Library » 2.12.17
+Standard library for the Scala Programming Language
+
+Maven Scala Plugin
+The maven-scala-plugin is used for compiling/testing/running/documenting scala code in maven.
 
 
 
