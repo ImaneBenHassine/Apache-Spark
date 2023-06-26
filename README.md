@@ -153,8 +153,9 @@ Sometimes, we may need to re-load the dependencies or restart the IntelliJ becau
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/478b1519-568a-4536-9881-15b347945cdd)
 
+**Note**: we may need to change the JDK to Java 8 instead of the 20 installed previously. Now let's run our first program
 
-
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/8945a7e6-e3c9-485b-81bb-e7ce91e84c61)
 
 
 
