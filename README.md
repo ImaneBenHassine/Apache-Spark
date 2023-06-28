@@ -17,9 +17,10 @@ PySpark supports two types of Data Abstractions:
 
    1. Installing Spark
    2. Installing & configurating Intellij
-   3. PySpark & MySQL
-   4. PySpark & PostgreSQL
-   5. PySpark & MongoDB
+   3. Debugging Errors with Scala 
+   4. PySpark & MySQL
+   5. PySpark & PostgreSQL
+   6. PySpark & MongoDB
    
    
 ### 1. Installing Spark on Windows 10
@@ -169,7 +170,7 @@ Standard library for the Scala Programming Language
 Maven Scala Plugin
 The maven-scala-plugin is used for compiling/testing/running/documenting scala code in maven.
 
-### 3.DEbuging Eroors with Scala 
+### 3.Debugging Errors with Scala 
 
 when saving an RDD to a file : 
 
