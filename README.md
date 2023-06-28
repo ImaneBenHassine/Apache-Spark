@@ -169,6 +169,12 @@ Standard library for the Scala Programming Language
 Maven Scala Plugin
 The maven-scala-plugin is used for compiling/testing/running/documenting scala code in maven.
 
+### 3.DEbuging Eroors with Scala 
 
+when saving an RDD to a file : 
+
+        Caused by: java.lang.UnsatisfiedLinkError: org.apache.hadoop.io.nativeio.NativeIO$Windows.access0(Ljava/lang/String;I)Z
+
+I solved by adding under hadoop/bin the hadoop.dll from https://github.com/steveloughran/winutils/blob/master/hadoop-3.0.0/bin/hadoop.dll 
 
 
