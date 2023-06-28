@@ -172,10 +172,10 @@ The maven-scala-plugin is used for compiling/testing/running/documenting scala c
 
 ### 3.Debugging Errors with Scala 
 
-when saving an RDD to a file : 
+- when saving an RDD to a file : 
 
         Caused by: java.lang.UnsatisfiedLinkError: org.apache.hadoop.io.nativeio.NativeIO$Windows.access0(Ljava/lang/String;I)Z
 
-I solved by adding under hadoop/bin the hadoop.dll from https://github.com/steveloughran/winutils/blob/master/hadoop-3.0.0/bin/hadoop.dll 
+I solved by adding under hadoop/bin the **hadoop.dll** from https://github.com/steveloughran/winutils/blob/master/hadoop-3.0.0/bin/hadoop.dll 
 
 
