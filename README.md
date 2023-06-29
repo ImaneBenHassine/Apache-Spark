@@ -170,12 +170,14 @@ Standard library for the Scala Programming Language
 Maven Scala Plugin
 The maven-scala-plugin is used for compiling/testing/running/documenting scala code in maven.
 
-### 3.Debugging Errors with Scala 
-- when I submit the Spark Job it gives below error :
+### 3. Debugging Errors with Scala 
+
+- when submiting the Spark Job it gives below error :
 
           Caused by: java.lang.ClassNotFoundException: org.apache.spark.sql.SparkSession
   
   fixed by adding "Include dependencies with Provided scope" to the Run/Debug Configuration :
+  
   ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/ac58fda7-26d5-40f2-8482-d4241a76566e)
 
 - when saving an RDD to a file : 
