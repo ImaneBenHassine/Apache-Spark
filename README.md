@@ -186,3 +186,6 @@ The maven-scala-plugin is used for compiling/testing/running/documenting scala c
 
 I solved by adding under hadoop/bin the **hadoop.dll** from https://github.com/steveloughran/winutils/blob/master/hadoop-3.0.0/bin/hadoop.dll 
 
+
+
+     
