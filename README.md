@@ -193,7 +193,7 @@ I solved by adding under hadoop/bin the **hadoop.dll** from https://github.com/s
 
 fixed by adding **"trustServerCertificate=true";** to the Url of the conncetion 
 
-- Here we need to download the JDBC driver can be added to a Maven project by adding it as a dependency in the POM.xml file with the following link : 
+- Here we need to download the JDBC driver which can be added to a Maven project by adding it as a dependency in the POM.xml file with the following link : 
 
   https://mvnrepository.com/artifact/com.microsoft.sqlserver/mssql-jdbc.
 
@@ -204,13 +204,9 @@ fixed by adding **"trustServerCertificate=true";** to the Url of the conncetion
 
 So i had to try other version and found out that **Microsoft JDBC Driver 6.0 for SQL Server** is the most recommanded and did worked with the **mssql-JDBC**  : https://www.microsoft.com/en-us/download/details.aspx?id=11774
 
-     
-
 Now we run sqljdbc_<version>_enu.exe, then copy the ddl file under pom directory we need to add it as a standard library of the Global Libraries of the project 
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/a0584d05-3fd9-49fd-a3e4-91944302ee04)
-
-     Impossible de charger la DLL mssql-jdbc_auth-12.2.0.x64 d’authentification
 
 - So this error pomp out
 
