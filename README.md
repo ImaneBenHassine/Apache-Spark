@@ -193,8 +193,28 @@ I solved by adding under hadoop/bin the **hadoop.dll** from https://github.com/s
 
 fixed by adding **"trustServerCertificate=true";** to the Url of the conncetion 
 
-     ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/99f6e516-2d30-443d-a879-709f88d2513f)
+- Here we need to download the JDBC driver can be added to a Maven project by adding it as a dependency in the POM.xml file with the following link : 
 
+  https://mvnrepository.com/artifact/com.microsoft.sqlserver/mssql-jdbc.
 
-  com.microsoft.sqlserver.jdbc.SQLServerException: Login failed for user
+  - This error come upe when trying to install the last driver
+ 
+        com/microsoft/sqlserver/jdbc/SQLServerDriver has been compiled by a more recent version of the Java Runtime (class file version 55.0), this version of the Java 
+         Runtime only recognizes class file versions up to 52.0
+
+So i had to try other version and found out that **Microsoft JDBC Driver 6.0 for SQL Server** is the most recommanded and did worked with the **mssql-JDBC**  : https://www.microsoft.com/en-us/download/details.aspx?id=11774
+
+     
+
+Now we run sqljdbc_<version>_enu.exe, then copy the ddl file under pom directory we need to add it as a standard library of the Global Libraries of the project 
+
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/a0584d05-3fd9-49fd-a3e4-91944302ee04)
+
+     Impossible de charger la DLL mssql-jdbc_auth-12.2.0.x64 d’authentification
+
+- So this error pomp out
+
+       sql server - no mssql-jdbc_auth-8.2.1.x64 in java.library.path
+ 
+ fixed by adding the **sqljdbc_auth.dll** to %JAVA_HOME%/jre/bin and the connection was finally established!
 
