@@ -186,6 +186,15 @@ The maven-scala-plugin is used for compiling/testing/running/documenting scala c
 
 I solved by adding under hadoop/bin the **hadoop.dll** from https://github.com/steveloughran/winutils/blob/master/hadoop-3.0.0/bin/hadoop.dll 
 
+- unable to find valid certification path to requested target
+  
+        Caused by: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid 
+        certification path to requested target
+
+fixed by adding **"trustServerCertificate=true";** to the Url of the conncetion 
+
+     ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/99f6e516-2d30-443d-a879-709f88d2513f)
 
 
-     
+  com.microsoft.sqlserver.jdbc.SQLServerException: Login failed for user
+
