@@ -265,4 +265,25 @@ As seen **"mongo"** is not recognized as internal or external an a command, so t
 #### 4.3  Write PySpark DataFrame to MongoDB Database Table
 
 ### 5. Spark & HBase
+
 Starting by downloading ApacheHBase following the link : https://hbase.apache.org/downloads.html
+
+Then we need to change some settings such as :
+
+- file **bin/hbase.cmd** ,java_arguments and delete **%HEAP_SETTINGS%**
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/0dfff4c8-4f85-44d8-a391-f2aa2b56c7c7)
+
+- file **conf/hbase-env.cmd** and add variables : jdk directory , HBase repository, HeapSize , some information on the Master , Sever, Port of REGIONSERVER..
+ 
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/d87293a8-fc44-4c37-8982-0e48bec31e03)
+
+- file conf/hbase-site.xml : we add the following properties to the configuration tag :
+
+  ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/aaa4b9a7-56cd-458d-93ac-e27490c71d73)
+
+- Create variable HBASE_HOME with value as the path of the Hbase directory
+
+Now we can lunch Hbase, throw the Line command by typing 
+
+        cd ..\HBase\hbase-2.5.5>cd bin
+          \HBase\hbase-2.5.5>cd bin
