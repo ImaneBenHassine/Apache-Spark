@@ -39,9 +39,13 @@ In order to connect to SQL-server (mssql) from Apache Spark, we would need the f
 the Steps to connect Spark to SQL Server and Read and write Table are: 
 
 Step 1 – Identify the Spark SQL Connector version to use : Apache Spark connector for SQL server works with both **SQL Server on-prem** & **Azure SQL**
+
 Step 2 – Add the dependency : I am using Maven, so I add the  dependency to the pom.xml
+
 Step 3 – Create SparkSession & Dataframe
+
 Step 4 – Save Spark DataFrame to SQL Server Table
+
 Step 5 – Read SQL Table to Spark Dataframe
 
 Make sure you have these details before you read or write to the SQL server. The driver I am going to use in this article is **com.microsoft.sqlserver.jdbc.spark**
