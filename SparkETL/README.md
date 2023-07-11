@@ -1,4 +1,51 @@
-### 2. Spark & SQL
+### 1. Spark & SQL
+#### 1.1 Install SQL
+Downloading [SQL Server 2022 Developer](https://www.microsoft.com/fr-fr/sql-server/sql-server-downloads) which is the **Developper** version for SQLServer.
+
+From the SQL Server Installation Server we lunch a system configuration checker to make sure we have evry thing we need to run SQL Server.
+
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/e410f651-609c-45d7-babd-84e942858275)
+
+Next we go to Installation and lunch the download of SQL Server Management Tools, it will reset us automatically to : https://learn.microsoft.com/fr-fr/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16
+
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/9f1c58c2-cda7-4cc2-bc06-cb3444fa4fab)
+
+And from there, we go through the instructions and choose what we need for the project.
+
+#### 1.2 Create User & DataBase 
+Now we create a new databse, a user and we grant all the previleges on this databse to the new user already created.
+
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/0083ddcb-0f1d-4966-8ec3-ee32b08a5857)
+
+Then we create our first table and load the data from our csv file :
+
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/b2180489-7bcd-4dc0-85fc-c56c8d31f84c)
+
+a quick check of the data in the table 
+
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/7bc2833b-14c8-47df-ad5a-e4f78980a7f0)
+
+#### 1.3 Create Connection
+
+In order to connect to SQL-server (mssql) from Apache Spark, we would need the following :
+
+- Driver to use (I will provide this)
+- SQL server address & port
+- Database name
+- Table name
+- User name and
+- Password
+  
+the Steps to connect Spark to SQL Server and Read and write Table are: 
+
+Step 1 – Identify the Spark SQL Connector version to use : Apache Spark connector for SQL server works with both **SQL Server on-prem** & **Azure SQL**
+Step 2 – Add the dependency : I am using Maven, so I add the  dependency to the pom.xml
+Step 3 – Create SparkSession & Dataframe
+Step 4 – Save Spark DataFrame to SQL Server Table
+Step 5 – Read SQL Table to Spark Dataframe
+
+Make sure you have these details before you read or write to the SQL server. The driver I am going to use in this article is **com.microsoft.sqlserver.jdbc.spark**
+
 
 ### 2. Spark & MySQL
 
@@ -212,3 +259,6 @@ As seen **"mongo"** is not recognized as internal or external an a command, so t
 
 #### 4.2 Create DataBase, collection
 #### 4.3  Write PySpark DataFrame to MongoDB Database Table
+
+### 5. Spark & HBase
+Starting by downloading ApacheHBase following the link : https://hbase.apache.org/downloads.html
