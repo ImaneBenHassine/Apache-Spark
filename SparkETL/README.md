@@ -286,4 +286,9 @@ Then we need to change some settings such as :
 Now we can lunch Hbase, throw the Line command by typing 
 
         cd ..\HBase\hbase-2.5.5>cd bin
-          \HBase\hbase-2.5.5>cd bin
+                bin>start-hbase.cmd
+
+to check if all good : \bin>hbase version
+
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/92c06d9e-8f82-45fb-b930-ddf3701c0c89)
+
