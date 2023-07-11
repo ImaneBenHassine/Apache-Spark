@@ -199,7 +199,7 @@ fixed by adding **"trustServerCertificate=true";** to the Url of the conncetion
 
   - This error come upe when trying to install the last driver
  
-        com/microsoft/sqlserver/jdbc/SQLServerDriver has been compiled by a more recent version of the Java Runtime (class file version 55.0), this version of the Java 
+         com/microsoft/sqlserver/jdbc/SQLServerDriver has been compiled by a more recent version of the Java Runtime (class file version 55.0), this version of the Java 
          Runtime only recognizes class file versions up to 52.0
 
 So i had to try other version and found out that **Microsoft JDBC Driver 6.0 for SQL Server** is the most recommanded and did worked with the **mssql-JDBC**  : https://www.microsoft.com/en-us/download/details.aspx?id=11774
