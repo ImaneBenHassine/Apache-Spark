@@ -164,15 +164,13 @@ Or we can add the option to automatically download all the dependecies in the **
 
 #### 2.7 Deployment with Maven
 
-Scala Library » 2.12.17
-Standard library for the Scala Programming Language
+Scala Library » 2.12.17 : Standard library for the Scala Programming Language
 
-Maven Scala Plugin
-The maven-scala-plugin is used for compiling/testing/running/documenting scala code in maven.
+Maven Scala Plugin : is used for compiling/testing/running/documenting scala code in maven.
 
 ### 3. Debugging Errors with Scala 
 
-- when submiting the Spark Job it gives below error :
+- when submiting the project it gives below error :
 
           Caused by: java.lang.ClassNotFoundException: org.apache.spark.sql.SparkSession
   
@@ -186,18 +184,18 @@ The maven-scala-plugin is used for compiling/testing/running/documenting scala c
 
 I solved by adding under hadoop/bin the **hadoop.dll** from https://github.com/steveloughran/winutils/blob/master/hadoop-3.0.0/bin/hadoop.dll 
 
-- unable to find valid certification path to requested target
+- When reading from a SQL Server database, unable to find valid certification path to requested target
   
         Caused by: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid 
         certification path to requested target
 
-fixed by adding **"trustServerCertificate=true";** to the Url of the conncetion 
+fixed by adding **"trustServerCertificate=true";** to the Url of the conncetion since we use windows authentifecation for **SQLServer**.
 
 - Here we need to download the JDBC driver which can be added to a Maven project by adding it as a dependency in the POM.xml file with the following link : 
 
   https://mvnrepository.com/artifact/com.microsoft.sqlserver/mssql-jdbc.
 
-  - This error come upe when trying to install the last driver
+  - This error come up when trying to install the last **SQLServerDriver**
  
          com/microsoft/sqlserver/jdbc/SQLServerDriver has been compiled by a more recent version of the Java Runtime (class file version 55.0), this version of the Java 
          Runtime only recognizes class file versions up to 52.0
