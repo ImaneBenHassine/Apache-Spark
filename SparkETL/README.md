@@ -300,5 +300,17 @@ When I try to run **hbase shell**, I get an error message :
 
 Then I discovered that it could be related to the stability of the HBase release, so I tried with an older one like **2.4.17** & **2.4.1** but still faced with the same problem. 
 I discovered that the stable version is version [2.2.6](https://archive.apache.org/dist/hbase/2.2.6/), which I downloaded, and it's running smoothly.
+
+Now we can create table and column family .
+
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/1d7b1d2c-0a41-47b8-8a0e-4ce57132799a)
+
+then we insert some data 
+
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/a9fcba7a-0987-4c18-b98c-ec77aa0d7632)
+
+
+
+
       
-![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/b7d420bd-f688-4987-8ca8-03d57d71171a)
+
