@@ -265,10 +265,10 @@ As seen **"mongo"** is not recognized as internal or external an a command, so t
 #### 4.3  Write PySpark DataFrame to MongoDB Database Table
 
 ### 5. Spark & HBase
-#### 5.1 Install HBase
+#### 5.1 Install & Setup HBase in Standalone Mode
 Starting by downloading ApacheHBase following the link : https://hbase.apache.org/downloads.html
 
-Then we need to change some settings such as :
+Then we need to change some settings can be found [here](https://repository.apache.org/content/repositories/releases/org/apache/hbase/hbase/2.2.6/) such as :
 
 - file **bin/hbase.cmd** ,java_arguments and delete **%HEAP_SETTINGS%**
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/0dfff4c8-4f85-44d8-a391-f2aa2b56c7c7)
@@ -334,5 +334,9 @@ To develop applications HBase with Spark, we need to import a dependency from th
 
 Now we can start our application by creating the class object for integrating Spark & HBase.
 
-      
+First we create the catalog :
+
+ ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/d9b0e617-506e-4f6e-8e92-6a52d14dd1b7)
+
+Then we establish the connection with HBase, as we have imported with the connector data sources that we just use **sessionspark.read** and read it as a datasource like any other datasources
 
