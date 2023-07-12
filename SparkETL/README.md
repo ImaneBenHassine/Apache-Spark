@@ -265,7 +265,7 @@ As seen **"mongo"** is not recognized as internal or external an a command, so t
 #### 4.3  Write PySpark DataFrame to MongoDB Database Table
 
 ### 5. Spark & HBase
-
+#### 5.1 Install HBase
 Starting by downloading ApacheHBase following the link : https://hbase.apache.org/downloads.html
 
 Then we need to change some settings such as :
@@ -300,15 +300,19 @@ When I try to run **hbase shell**, I get an error message :
 
 Then I discovered that it could be related to the stability of the HBase release, so I tried with an older one like **2.4.17** & **2.4.1** but still faced with the same problem. 
 I discovered that the stable version is version [2.2.6](https://archive.apache.org/dist/hbase/2.2.6/), which I downloaded, and it's running smoothly.
+#### 5.2 Creta Table
+Now we can create table and column family and insert some data :
 
-Now we can create table and column family .
+       hbase(main):019:0> create 'table_spark', 'col_family'
+       > put 'table_spark', 'row1', 'col_family:1','value1'
+       > put 'table_spark', 'row1', 'col_family:1','value2'
+       > put 'table_spark', 'row2', 'col_family:1','value1'
+       > put 'table_spark', 'row3', 'col_family:1','value3'
 
-![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/1d7b1d2c-0a41-47b8-8a0e-4ce57132799a)
 
-then we insert some data 
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/2c2a674a-4f94-46c2-8db7-a789230247a0)
 
-![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/a9fcba7a-0987-4c18-b98c-ec77aa0d7632)
-
+#### 5.3 Create Connection
 To develop applications HBase with Spark, we need to import a dependency from the Maven repository such as :
  - Apache HBase Client
  - Apache HBase Spark Connector
