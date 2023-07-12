@@ -309,8 +309,14 @@ then we insert some data
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/a9fcba7a-0987-4c18-b98c-ec77aa0d7632)
 
+To develop applications HBase with Spark, we need to import a dependency from the Maven repository such as :
+ - Apache HBase Client
+ - Apache HBase Spark Connector
+ - shc-core : was not availbale on Maven but can be downloaded from this [link](https://repo.hortonworks.com/#browse/search=keyword%3Dshc-core%20AND%20version%3D1.1.0.2.6.2.1-1:NX.coreui.model.Component-601:d9027a70) , plus we need to add it to the project Externel Libraries
 
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/b17e42f1-a255-4e95-9857-336684a74efb)
 
+Now we can start our application by creating the class object for integrating Spark & HBase.
 
       
 
