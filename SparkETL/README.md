@@ -300,17 +300,29 @@ When I try to run **hbase shell**, I get an error message :
 
 Then I discovered that it could be related to the stability of the HBase release, so I tried with an older one like **2.4.17** & **2.4.1** but still faced with the same problem. 
 I discovered that the stable version is version [2.2.6](https://archive.apache.org/dist/hbase/2.2.6/), which I downloaded, and it's running smoothly.
-#### 5.2 Creta Table
+#### 5.2 Create Table
 Now we can create table and column family and insert some data :
 
-       hbase(main):019:0> create 'table_spark', 'col_family'
-       > put 'table_spark', 'row1', 'col_family:1','value1'
-       > put 'table_spark', 'row1', 'col_family:1','value2'
-       > put 'table_spark', 'row2', 'col_family:1','value1'
-       > put 'table_spark', 'row3', 'col_family:1','value3'
+       hbase(main):019:0> create 'table_orders', 'orders' ; 
+       put 'table_orders', '1002854', 'orders:customerid', '45978'
+       put 'table_orders', '1002854', 'orders:campaignid', '2141'
+       put 'table_orders', '1002854', 'orders:orderdate', '2009-10-13 00:00:00'
+       put 'table_orders', '1002854', 'orders:city', 'NEWTON'
+       put 'table_orders', '1002854', 'orders:state', 'MA'
 
+       put 'table_orders', '1002855', 'orders:customerid', '125381'
+       put 'table_orders', '1002855', 'orders:campaignid', '2173'
+       put 'table_orders', '1002855', 'orders:orderdate', '2009-10-13 00:00:00'
+       put 'table_orders', '1002855', 'orders:city', 'NEW ROCHELLE'
+       put 'table_orders', '1002855', 'orders:state', 'NY'
 
-![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/2c2a674a-4f94-46c2-8db7-a789230247a0)
+       put 'table_orders', '1002856', 'orders:customerid', '103122'
+       put 'table_orders', '1002856', 'orders:campaignid', '2141'
+       put 'table_orders', '1002856', 'orders:orderdate', '2011-06-02 00:00:00'
+       put 'table_orders', '1002856', 'orders:city', 'MIAMI'
+       put 'table_orders', '1002856', 'orders:state', 'FL'
+
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/ff6f929a-be91-4c97-9e52-d729d527a56f)
 
 #### 5.3 Create Connection
 To develop applications HBase with Spark, we need to import a dependency from the Maven repository such as :
