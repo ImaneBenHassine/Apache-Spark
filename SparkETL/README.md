@@ -292,3 +292,13 @@ to check if all good : \bin>hbase version
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/92c06d9e-8f82-45fb-b930-ddf3701c0c89)
 
+When I try to run **hbase shell**, I get an error message :
+
+       This file has been superceded by packaging our ruby files into a jar and using jruby's bootstrapping to invoke them. If you need to
+       source this file fo some reason it is now named 'jar-bootstrap.rb' and is located in the root of the file hbase-shell.jar and in the source tree at
+       'hbase-shell/src/main/ruby'.
+
+Then I discovered that it could be related to the stability of the HBase release, so I tried with an older one like **2.4.17** & **2.4.1** but still faced with the same problem. 
+I discovered that the stable version is version [2.2.6](https://archive.apache.org/dist/hbase/2.2.6/), which I downloaded, and it's running smoothly.
+      
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/b7d420bd-f688-4987-8ca8-03d57d71171a)
