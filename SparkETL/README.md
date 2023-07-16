@@ -344,12 +344,13 @@ Then we establish the connection with HBase, as we have imported with the connec
 #### 6.1 Install & Setup Cassandra in Standalone Mode
 Starting by downloading a stable version following the link : https://cassandra.apache.org/download/.
 
-Then creating an environment variable pointing to the root folder of cassandra installation : **CASSANDRA_HOME**. After we install the **Thrift Server**. needed for Cassandra from [here](https://thrift.apache.org/download). We also need to install **Python** preferably [V2.7](https://www.python.org/downloads/release/python-270/) 
+Then creating an environment variable pointing to the root folder of cassandra installation : **CASSANDRA_HOME**. After we install the **Thrift Server**. needed for Cassandra from [here](https://thrift.apache.org/download). We also need to install **Python** preferably [V2.7](https://www.python.org/downloads/release/python-2718/) 
 
 Now we can lunch Cassandra by running the script on CMD as admist
 
         cassandra.bat -f
 
-add in the cassandra.bat and the nodetool.bat, the path of the environment variable JAVA_HOME 
-SET JAVA_HOME=C: jdk etc...
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/95b51cc1-374d-4cab-b2e1-c390d7f6a58f)
+
+as seen we can lunch now the **cqlch** to excute SQL query on Cassandra
 
