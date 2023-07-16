@@ -352,5 +352,5 @@ Now we can lunch Cassandra by running the script on CMD as admist
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/95b51cc1-374d-4cab-b2e1-c390d7f6a58f)
 
-as seen we can lunch now the **cqlch** to excute SQL query on Cassandra
+as seen startup complete & Thrift server is enabled so we can lunch now the **cqlch** to execute SQL query on Cassandra
 
