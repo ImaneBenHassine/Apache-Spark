@@ -338,5 +338,18 @@ First we create the catalog :
 
  ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/d9b0e617-506e-4f6e-8e92-6a52d14dd1b7)
 
-Then we establish the connection with HBase, as we have imported with the connector data sources that we just use **sessionspark.read** and read it as a datasource like any other datasources
+Then we establish the connection with HBase, as we have imported with the connector data sources that we just use **sessionspark.read** and read it as a datasource like any other datasources.
+
+### 6. Spark & Cassandra
+#### 6.1 Install & Setup Cassandra in Standalone Mode
+Starting by downloading a stable version following the link : https://cassandra.apache.org/download/.
+
+Then creating an environment variable pointing to the root folder of cassandra installation : **CASSANDRA_HOME**. After we install the **Thrift Server**. needed for Cassandra from [here](https://thrift.apache.org/download). We also need to install **Python** preferably [V2.7](https://www.python.org/downloads/release/python-270/) 
+
+Now we can lunch Cassandra by running the script on CMD as admist
+
+        cassandra.bat -f
+
+add in the cassandra.bat and the nodetool.bat, the path of the environment variable JAVA_HOME 
+SET JAVA_HOME=C: jdk etc...
 
