@@ -348,9 +348,13 @@ Then creating an environment variable pointing to the root folder of cassandra i
 
 Now we can lunch Cassandra by running the script on CMD as admist
 
-        cassandra.bat -f
+        /../bin>cassandra.bat -f
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/95b51cc1-374d-4cab-b2e1-c390d7f6a58f)
 
 as seen startup complete & Thrift server is enabled so we can lunch now the **cqlch** to execute SQL query on Cassandra
 
+          bin>cqlsh.bat
+
+ ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/d6ab0c7c-dfba-4981-ba0a-083929d89359)
+      
