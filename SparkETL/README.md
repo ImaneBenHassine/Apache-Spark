@@ -388,5 +388,7 @@ We can download [DataStax Enterprise](https://downloads.datastax.com/#studio) wh
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/7d740a79-b88d-479c-83d9-19ec7efe0e61)
 
- 
+ Studio will be running at [localhost](http://localhost:9091/). Then we choose **Working with CQL v6.8.0** and a new Notebook will be created.
+
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/b75a2f3f-eb27-4bfc-9aae-ef419b33aacb)
 
