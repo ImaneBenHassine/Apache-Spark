@@ -382,9 +382,11 @@ To insert data
 Using the **shell** to create tables , insert rows could be quite challenging. That's why it's recommended to use DataStax.
 
 #### 6.3 Using DataStax
-We can download [DataStax Enterprise](https://downloads.datastax.com/) which is a scale-out data infrastructure built on the foundation of Apache Cassandra  
+We can download [DataStax Enterprise](https://downloads.datastax.com/#studio) which is a scale-out data infrastructure built on the foundation of Apache Cassandra.  
 
+           /../datastax-studio-6.8.26\bin>server.bat
 
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/7d740a79-b88d-479c-83d9-19ec7efe0e61)
 
  
 
