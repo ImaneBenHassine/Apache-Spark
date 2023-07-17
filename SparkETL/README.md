@@ -358,3 +358,4 @@ as seen startup complete & Thrift server is enabled so we can lunch now the **cq
 
  ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/d6ab0c7c-dfba-4981-ba0a-083929d89359)
       
+#### 6.2 Create Table
