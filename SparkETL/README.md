@@ -392,3 +392,4 @@ We can download [DataStax Enterprise](https://downloads.datastax.com/#studio) wh
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/b75a2f3f-eb27-4bfc-9aae-ef419b33aacb)
 
+Ps: Studio only supports DataStax Astra & Enterprise clusters so it won't work with the community version of Cassandra.
