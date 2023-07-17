@@ -380,7 +380,8 @@ To insert data
                  808080808080, '1961-4-12T06:07:00+0000', '1961-4-12T07:55:00+0000', False, 'First manned spaceflight. Completed one Earth orbit.');
 
 Using the **shell** to create tables , insert rows could be quite challenging. That's why it's recommended to use DataStax.
-        
+
+#### 6.3 Using DataStax
 We can download [DataStax Enterprise](https://downloads.datastax.com/) which is a scale-out data infrastructure built on the foundation of Apache Cassandra  
 
 
