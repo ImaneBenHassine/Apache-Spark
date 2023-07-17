@@ -393,3 +393,31 @@ We can download [DataStax Enterprise](https://downloads.datastax.com/#studio) wh
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/b75a2f3f-eb27-4bfc-9aae-ef419b33aacb)
 
 Ps: Studio only supports DataStax Astra & Enterprise clusters so it won't work with the community version of Cassandra.
+
+#### 6.4 Create Connection
+
+If query is known, there's no need to use Spark to question Cassandra. This is only useful when the requests are not known beforehand or when cassandra's processing of difficult queries such as aggregation or groupby that negatively impact its performance.
+- 1 Spark executor = 1 Cassandra node.
+- the connection is made via the **Java Driver Datastax** connector, choosing the stablest version on Maven Repository **Spark Cassandra Connector 2.4.2**
+- supports features of the Datastax Spark Connector:  for **RDD API** (cassandraTable, saveToCassandra, repartitionByCassandraTable, joinWithCassandraTable) for **DataFrame API** (Datasource).
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
