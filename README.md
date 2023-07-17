@@ -6,8 +6,6 @@ This repository contains my notes of my Apache Spark learning journey through co
 
 **Apache Spark** is an Open source framework, an in-memory computing processing engine that processes data on the Hadoop Ecosystem. It processes both **batch** and **real-time** data in a **parallel** and **distributed** manner.
 
-MapReduce: . M It is not iterative and interactive. MapReduce can process larger sets of data compared to spark.
-
 **Spark VS MapReduce** : 
 
 - Spark is a lighting-fast in-memory computing process engine, 100 times faster than MapReduce, 10 times faster to disk but MapReduce is I/O intensive read from and writes to disk.
