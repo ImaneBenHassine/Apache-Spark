@@ -357,5 +357,33 @@ as seen startup complete & Thrift server is enabled so we can lunch now the **cq
           bin>cqlsh.bat
 
  ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/d6ab0c7c-dfba-4981-ba0a-083929d89359)
-      
+
 #### 6.2 Create Table
+To create the table we use **Cassandra Query Language (CQL)**. CQL offers a model similar to SQL where the data is stored in tables containing rows of columns
+whose schema defines the layout of the data in the table. 
+
+Tables are located in **keyspaces**. A keyspace defines options that apply to all the keyspace’s tables where we set the replication strategy and the replication factor. A good general rule is one keyspace per application.A table is always part of a keyspace.
+
+- **SimpleStrategy** that defines a replication factor for data to be spread **across the entire cluster**. This is generally not a wise choice for production, as it does not respect datacenter layouts and can lead to wildly varying query latency. SimpleStrategy supports a single mandatory argument:**replication_factor** whiche describe the number of replicas to store per range.
+- **NetworkTopologyStrategy** is a production-ready replication strategy that sets the replication factor **independently for each data-center**.
+
+        cqlsh> CREATE KEYSPACE demo WITH replication = {'class': 'SimpleStrategy', 'replication_factor': '1'}  AND durable_writes = true;
+
+        cqlsh> CREATE TABLE IF NOT EXISTS demo.spacecraft_journey_catalog (  spacecraft_name text,  journey_id timeuuid,  start timestamp,  end timestamp,  active boolean,  
+                  summary text,  PRIMARY KEY ((spacecraft_name), journey_id)) WITH CLUSTERING ORDER BY (journey_id desc);
+
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/df6ed3b2-02b9-4d72-b294-ad28061b03b7)
+
+To insert data 
+
+           cqlsh> INSERT INTO demo.spacecraft_journey_catalog (spacecraft_name, journey_id, start, end, active, summary) VALUES ('vostok1', 805b1a00-5673-11a8-8080- 
+                 808080808080, '1961-4-12T06:07:00+0000', '1961-4-12T07:55:00+0000', False, 'First manned spaceflight. Completed one Earth orbit.');
+
+Using the **shell** to create tables , insert rows could be quite challenging. That's why it's recommended to use DataStax.
+        
+We can download [DataStax Enterprise](https://downloads.datastax.com/) which is a scale-out data infrastructure built on the foundation of Apache Cassandra  
+
+
+
+ 
+
