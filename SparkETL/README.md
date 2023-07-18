@@ -429,8 +429,10 @@ Now it works :
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/db1a0b2b-9392-408a-9077-2944b92355ff)
 
 and the web shows all details about cluster, version..
+
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/305f021d-46e7-4aab-ba45-dc5859d8b559)
 
+Now let's download **Kibana** to be able to visualize the data and navigate the Stack folowing this  (link](https://www.elastic.co/downloads/kibana)
 
 
 
