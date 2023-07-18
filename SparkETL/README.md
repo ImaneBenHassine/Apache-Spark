@@ -340,6 +340,8 @@ First we create the catalog :
 
 Then we establish the connection with HBase, as we have imported with the connector data sources that we just use **sessionspark.read** and read it as a datasource like any other datasources.
 
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/4f86d1db-d361-48a2-b39a-8fb0e4c7f016)
+
 ### 6. Spark & Cassandra
 #### 6.1 Install & Setup Cassandra in Standalone Mode
 Starting by downloading a stable version following the link : https://cassandra.apache.org/download/.
