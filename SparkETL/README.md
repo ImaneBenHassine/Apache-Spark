@@ -432,10 +432,17 @@ and the web shows all details about cluster, version..
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/305f021d-46e7-4aab-ba45-dc5859d8b559)
 
-Now let's download **Kibana** to be able to visualize the data and navigate the Stack folowing this  (link](https://www.elastic.co/downloads/kibana)
+Now let's download **Kibana** to be able to visualize the data and navigate the Stack folowing this  (link](https://www.elastic.co/downloads/kibana). Then we nedd to set some changes in the **kibana.yml** configuration such as :
 
+          server.port: 5601
+          server.host: "localhost"
+          elasticsearch.hosts: ["http://localhost:9200"]
 
+We are good to run Kibana :
 
+                 \bin>kibana.bat
+                 
+Kibana server start running at http://localhost:5601. Now we can create indesx add it and visual it with Kibana.
 
 
 
