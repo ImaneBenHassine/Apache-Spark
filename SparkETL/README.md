@@ -408,6 +408,8 @@ Now we can integrate database :
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/fc799e7d-4618-4931-b565-3881bd588e40)
 
 ### 7. Spark & Elasticsearch
+Elasticsearch is the distributed search and analytics engine , provides near real-time search and analytics for all types of data : structured or unstructured text, numerical data, or geospatial data, Elasticsearch can efficiently store and index it in a way that supports fast searches.
+
 #### 7.1 Install & Setup Elasticsearch 
 
 Starting by downloading Elasticsearch following this [link](https://www.elastic.co/guide/en/elasticsearch/reference/7.11/windows.html) using the .msi package
