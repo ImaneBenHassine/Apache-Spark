@@ -414,7 +414,16 @@ Elasticsearch is the distributed search and analytics engine , provides near rea
 
 Starting by downloading Elasticsearch following this [link](https://www.elastic.co/guide/en/elasticsearch/reference/7.11/windows.html) using the .msi package
 
+After installation, when trying to lunch elasticsearch throw the web **http://localhost:9200/** or the shell this error appears:
 
+                  ELK\7.11.2\bin>elasticsearch.exe
+                  Erreur : Unable to find or load the Warning main class
+
+It turns out that elestecsearch has its own **jdk**, but the Java installed on my system, which runs all other applications is not identical to the one that comes with elestecsearch.
+
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/a0e4f99c-e8a5-4e20-a50e-2c2e83a4db7b)
+
+So we should reinstall an elasticsearch version that has the same Java version(1.8 in my cass).
 
 
 
