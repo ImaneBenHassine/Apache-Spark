@@ -401,6 +401,8 @@ If query is known, there's no need to use Spark to question Cassandra. This is o
 - the connection is made via the **Java Driver Datastax** connector, choosing the stablest version on Maven Repository **Spark Cassandra Connector 2.4.2**
 - supports features of the Datastax Spark Connector:  for **RDD API** (cassandraTable, saveToCassandra, repartitionByCassandraTable, joinWithCassandraTable) for **DataFrame API** (Datasource).
 
+Now we can integrate database :
+
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/fc799e7d-4618-4931-b565-3881bd588e40)
 
   
