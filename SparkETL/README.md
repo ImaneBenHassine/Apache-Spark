@@ -455,7 +455,7 @@ To create connection with ElasticSearch we will need to specify:
 - es.nodes : localhost
 - name of the index and the type : indexe/doc
 
-it will append or modify if already index exists
+it will append or modify if already index exists.
 
 
     import org.elasticsearch.spark.sql._
@@ -465,6 +465,7 @@ it will append or modify if already index exists
       .option("es.nodes","localhost")
       .save("index_ibh/doc")
    
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/f92e29e1-0466-49ea-b6cb-bcb10b8267c8)
 
 
 
