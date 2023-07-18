@@ -410,7 +410,7 @@ Now we can integrate database :
 ### 7. Spark & Elasticsearch
 #### 7.1 Install & Setup Elasticsearch 
 
-
+Starting by downloading Elasticsearch following this [link](https://www.elastic.co/guide/en/elasticsearch/reference/7.11/windows.html) using the .msi package
 
 
 
