@@ -442,8 +442,12 @@ We are good to run Kibana :
 
                  \bin>kibana.bat
                  
-Kibana server start running at http://localhost:5601. Now we can create indesx add it and visual it with Kibana.
+Kibana server start running at http://localhost:5601. Now we can create indexes add it and visual it with Kibana.
 
+To develop applications Elasticsearch with Spark, we need to import a dependency from the Maven repository such as :
+ - Elasticsearch Spark Connector
+ - Client REST HTTP
+   
 
 
 
