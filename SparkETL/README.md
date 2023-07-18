@@ -423,7 +423,13 @@ It turns out that elestecsearch has its own **jdk**, but the Java installed on m
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/a0e4f99c-e8a5-4e20-a50e-2c2e83a4db7b)
 
-So we should reinstall an elasticsearch version that has the same Java version(1.8 in my cass).
+So we should reinstall an elasticsearch version that has the same Java version(1.8 in my cass) or delete the variable JAVA_HOME so elasticsearch can point directly to it's own jdk.
+
+Now it works :
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/db1a0b2b-9392-408a-9077-2944b92355ff)
+
+and the web shows all details about cluster, version..
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/305f021d-46e7-4aab-ba45-dc5859d8b559)
 
 
 
