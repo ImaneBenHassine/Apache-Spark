@@ -447,6 +447,23 @@ Kibana server start running at http://localhost:5601. Now we can create indexes 
 To develop applications Elasticsearch with Spark, we need to import a dependency from the Maven repository such as :
  - ElasticSearch Spark Connector
  - Client REST HTTP
+
+#### 7.2 Create Index
+To create connection with ElasticSearch we will need to specify:
+- format : org.elasticsearch.spark.sql
+- es.port : 9200
+- es.nodes : localhost
+- name of the index and the type : indexe/doc
+
+it will append or modify if already index exists
+
+
+    import org.elasticsearch.spark.sql._
+    df_orders.write
+      .format("org.elasticsearch.spark.sql")
+      .option("es.port","9200")
+      .option("es.nodes","localhost")
+      .save("index_ibh/doc")
    
 
 
