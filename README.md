@@ -306,7 +306,7 @@ then we create a logging for our class with a specific name.
        def count_leng(text: String) : Int = {
        log_appli.info("start the  logging")
        log_appli.info(s"the parameter logged by Log4J for this function is : $text")
-       log_appli.info(s"Message warning Log4J : ${10+15}") // calculation done inside sting
+       log_appli.warn(s"Message warning Log4J : ${10+15}") // calculation done inside sting
 
 we run the code , but this error appear :
 
@@ -318,3 +318,12 @@ at this point we need to add the file configuration into the project, under ress
  
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/370700a9-88e6-4989-b3dc-1552eb7201df)
 
+But the same error still pump out so as a solution we will add the Basic Configuration of the by default logger before the logger just created :
+
+      BasicConfigurator.configure()
+     // logging this class HelloScala
+     private val log_appli : Logger =LogManager.getLogger("Logger_Console")
+
+And now we get to see our logging messagaes 
+
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/58630e42-e7f4-42e7-8787-af239d582890)
