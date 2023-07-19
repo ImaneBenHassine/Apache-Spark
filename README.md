@@ -313,9 +313,24 @@ we run the code , but this error appear :
   log4j:WARN Please initialize the log4j system properly.
   log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
  
-at this point we need to add the file configuration into the project, under ressources as an EXML file
+at this point we need to add the file configuration into the project, under ressources as an FXML file
  
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/370700a9-88e6-4989-b3dc-1552eb7201df)
+
+      <?xml version="1.0" encoding="UTF-8"?>
+      <!-- Attention !!! Pour utiliser ce template, il faudra enlever 'template' du fichier et le renommer uniquement 'log4j2' avant de le charger dans votre projet-->
+    <Configuration status="warn">
+        <Appenders>
+           <Console name="Console" target="SYSTEM_OUT">
+              <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+           </Console>
+        </Appenders>
+       <Loggers name="Logger_Console" level="info">
+          <Root level="error">
+              <AppenderRef ref="Console"/>
+          </Root>
+        </Loggers>
+     </Configuration>
 
 But the same error still pump out so as a solution we will add the Basic Configuration of the by default logger before the logger just created :
 
