@@ -471,7 +471,7 @@ Here we can specify wich column we need it to be searchabla or not
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/bcd0e164-4e14-4bbd-8155-f34a4855e1a8)
 
-Later we can use Kibana to play data , searchnig for a specific value, create dasboards ..
+Later, we can use Kibana to play data, searching for a specific value, create dashboards..
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/17e4f321-892d-4bf9-b300-ca67ab518242)
 
