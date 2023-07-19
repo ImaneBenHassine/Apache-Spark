@@ -453,10 +453,10 @@ To create connection with ElasticSearch we will need to specify:
 - format : org.elasticsearch.spark.sql
 - es.port : 9200
 - es.nodes : localhost
+- es.nodes.wan.only: true if data comes from Cloud
 - name of the index and the type : indexe/doc
 
 it will append or modify if already index exists.
-
 
     import org.elasticsearch.spark.sql._
     df_orders.write
@@ -467,6 +467,13 @@ it will append or modify if already index exists.
    
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/f92e29e1-0466-49ea-b6cb-bcb10b8267c8)
 
+Here we can specify wich column we need it to be searchabla or not
+
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/bcd0e164-4e14-4bbd-8155-f34a4855e1a8)
+
+Later we can use Kibana to play data , searchnig for a specific value, create dasboards ..
+
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/17e4f321-892d-4bf9-b300-ca67ab518242)
 
 
 
