@@ -234,11 +234,13 @@ then we read the table from PostgreSQL using Spark:
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/cfa276a2-10b2-4619-ace9-9a74340ee14a)
 
 After we create Hive table and do transformation.
+
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/bb4b2164-c5dc-4f4b-a606-ceba7c611e7c)
 
 Finnaly we load the new table into PostgreSql from Spark using Write.
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/6ece615c-d07f-4d84-a8ca-eb8c9768eff2)
+
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/1dc140f3-d00e-4ab2-a084-831cd3fba49c)
 
@@ -439,7 +441,7 @@ and the web shows all details about cluster, version..
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/305f021d-46e7-4aab-ba45-dc5859d8b559)
 
-Now let's download **Kibana** to be able to visualize the data and navigate the Stack folowing this  (link](https://www.elastic.co/downloads/kibana). Then we nedd to set some changes in the **kibana.yml** configuration such as :
+Now let's download **Kibana** to be able to visualize the data and navigate the Stack folowing this  [link](https://www.elastic.co/downloads/kibana). Then we nedd to set some changes in the **kibana.yml** configuration such as :
 
           server.port: 5601
           server.host: "localhost"
