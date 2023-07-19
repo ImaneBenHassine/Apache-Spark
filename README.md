@@ -283,7 +283,6 @@ log4j.appender.X=org.apache.log4j.FileAppender
 log4j.appender.X.layout=org.apache.log4j.PatternLayout
 log4j.appender.X.layout.conversionPattern=%m%n
 
-
 #### 4.2 Get Log4j
 Declares the following dependencies from Maven
 - Apache Log4j API
@@ -324,6 +323,6 @@ But the same error still pump out so as a solution we will add the Basic Configu
      // logging this class HelloScala
      private val log_appli : Logger =LogManager.getLogger("Logger_Console")
      
-And now we get to see our logging messages. Still, my file of configuration was not used cause the message should be formatted by date, hour, minute as stated
+And now we get to see our logging messages. Still, my file of configuration was not used cause the message should be formatted by date, hour, minute as stated , it is probably a problem related to Windows.
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/58630e42-e7f4-42e7-8787-af239d582890)
