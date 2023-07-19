@@ -230,17 +230,26 @@ Now we run sqljdbc_<version>_enu.exe, then copy the ddl file under pom directory
  
  fixed by adding the **sqljdbc_auth.dll** to %JAVA_HOME%/jre/bin and the connection was finally established!
 
-### 3. API logging
+### 4. API logging
 If we ask an expert developer about the most annoying thing about an application, the answer might be related to **logging**. If there is no suitable logging in an application, **maintenance** will be a **nightmare**. Most of the application go through Development testing, unit testing, integration testing. But when it comes to **production**, you will always face **unique scenarios and exception**. 
 
-So the only way to figure out what happened in a specific case is to **debug through the logs**. Many frameworks provide some way of default logging, but it’s always best to go with the industry standard logging mechanism. **Apache Log4j** is one of the most widely used logging frameworks. Apache Log4j 2 is the next version, that is far better than Log4j.
+So the only way to figure out what happened in a specific case is to **debug through the logs** and using Logging API in application isn’t a luxury, it’s a must have. Many frameworks provide some way of default logging, but it’s always best to go with the industry standard logging mechanism. 
+
+**Apache Log4j** is one of the most widely used logging frameworks and is an open source library that’s published and licensed under Apache Software. we can debug an application using Eclipse Debugging or some other tools, but that is not sufficient and feasible in a production environment. Logging mechanism will provide several benefits that we will not find in normal debugging such as :
+- No need for human intervention
+- Can be integrated with persistent storage (Files, Database, NoSQL database, etc.)
+- Can be used for achieving auditing if it’s used efficiently
+- Sufficient
+- More productive
+
+Apache Log4j 2 is the next version, that is far better than Log4j.
 
 In this Log4j2 section, we will learn how to get started with Apache Log4j2. We will also explore Log4j2 architecture, log4j2 configuration, log4j2 logging levels, appenders, filters and much more.
 
 
-3.1 Get Log4j
+#### 4.1 Get Log4j
 Declares the following dependencies :
 
-3.2 log4j.properties
+#### 4.2 log4j.properties
 Create a log4j.properties file and put it into the resources folder
 
