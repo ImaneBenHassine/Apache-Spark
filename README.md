@@ -252,18 +252,69 @@ In this Log4j2 section, we will learn how to get started with Apache Log4j2. We 
 - If the **Logger** isn’t created yet, it will be created and associated with **LoggerConfig** according to three choices below either Logger instance will be created and 
        associated with the **LoggerConfig** that have the **same name**. Or Logger instance will be created and associated with the LoggerConfig that have the same **Loggers 
        parentpackage**. Or Logger instance will be created and associated with the **Root LoggerConfig**. 
-- **LoggerConfig** objects are created from Logger declaration in the configuration file. LoggerConfig is also used to handle **LogEvents** and delegate them for their defined **Log4j2 Appenders**.
+- **LoggerConfig** objects are created from Logger declaration in the configuration file. LoggerConfig is also used to handle **LogEvents** and delegate them for their 
+       defined **Log4j2 Appenders**.
 - Root logger is an exceptional case, in terms of its existence. It always exists and at the top of any logger hierarchy.
 - The name of log4j2 loggers are case sensitive.
 - Except root logger, all loggers can be obtained through passing their name into **LogManager.getLogger()**.
-- LoggerContext is a vocal point for Logging system as you may have multiple LoggerContexts inside your application. Per each LoggerContext an active configuration should be set.
+- LoggerContext is a vocal point for Logging system as you may have multiple LoggerContexts inside your application. Per each LoggerContext an active configuration should be 
+       set.
 - Log4j2 configuration contains all Logging system assets; LoggerConfig(s), Appender(s), Filter(s) and many others.
 - Calling of LogManager.getLogger() by passing the same name will always return the reference for the exact same logger instance.
-- Configuration of Logging system is typically done with the application initialization. This can take different forms; programmatically or by reading a log4j2 configuration file
+- Configuration of Logging system is typically done with the application initialization. This can take different forms; programmatically or by reading a log4j2 configuration 
+       file
+  
+#### 4.2 log4j2.properties
+The log4j2.properties file is a log4j configuration file which keeps properties in key-value pairs. By default, the LogManager looks for a file named log4j.properties in the CLASSPATH.
 
-#### 4.1 Get Log4j
-Declares the following dependencies :
+Configuration of Log4j 2 can be accomplished in 1 of 4 ways: Through a configuration file written in **XML**, JSON, YAML, or properties format.
 
-#### 4.2 log4j.properties
+- The level of the root logger is defined as DEBUG. The DEBUG attaches the appender named X to it.
+- Set the appender named X to be a valid appender.
+- Set the layout for the appender X.
+
+# Define the root logger with appender X
+log4j.rootLogger = DEBUG, X
+
+# Set the appender named X to be a File appender
+log4j.appender.X=org.apache.log4j.FileAppender
+
+# Define the layout for X appender
+log4j.appender.X.layout=org.apache.log4j.PatternLayout
+log4j.appender.X.layout.conversionPattern=%m%n
+
+
+#### 4.2 Get Log4j
+Declares the following dependencies from Maven
+- Apache Log4j API
+- Apache Log4j Core
+
+#### 4.3 log4j.properties
 Create a log4j.properties file and put it into the resources folder
+
+we started by importing dependecies :
+
+         import org.apache.log4j._
+
+then we create a logging for our class with a specific name.
+
+        private val log_appli : Logger =LogManager.getLogger("Logger_Console")
+
+ And we add logging message on one of our functions as shwon below
+ 
+           /* my first function  */
+       def count_leng(text: String) : Int = {
+       log_appli.info("start the  logging")
+       log_appli.info(s"the parameter logged by Log4J for this function is : $text")
+       log_appli.info(s"Message warning Log4J : ${10+15}") // calculation done inside sting
+
+we run the code , but this error appear :
+
+  log4j:WARN No appenders could be found for logger (Logger_Console).
+  log4j:WARN Please initialize the log4j system properly.
+  log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+ 
+at this point we need to add the file configuration into the project, under ressources as an EXML file
+ 
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/370700a9-88e6-4989-b3dc-1552eb7201df)
 
