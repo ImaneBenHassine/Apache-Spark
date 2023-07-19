@@ -1,4 +1,6 @@
 ### 1. Spark & SQL
+[The Scala code on IntelliJ]()
+
 #### 1.1 Install SQL
 Downloading [SQL Server 2022 Developer](https://www.microsoft.com/fr-fr/sql-server/sql-server-downloads) which is the **Developper** version for SQLServer.
 
@@ -265,6 +267,8 @@ As seen **"mongo"** is not recognized as internal or external an a command, so t
 #### 4.3  Write PySpark DataFrame to MongoDB Database Table
 
 ### 5. Spark & HBase
+[The Scala code on IntelliJ]()
+
 #### 5.1 Install & Setup HBase in Standalone Mode
 Starting by downloading ApacheHBase following the link : https://hbase.apache.org/downloads.html
 
@@ -343,6 +347,7 @@ Then we establish the connection with HBase, as we have imported with the connec
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/4f86d1db-d361-48a2-b39a-8fb0e4c7f016)
 
 ### 6. Spark & Cassandra
+[The Scala code on IntelliJ]()
 #### 6.1 Install & Setup Cassandra in Standalone Mode
 Starting by downloading a stable version following the link : https://cassandra.apache.org/download/.
 
@@ -409,6 +414,8 @@ Now we can integrate database :
 
 ### 7. Spark & Elasticsearch
 Elasticsearch is the distributed search and analytics engine , provides near real-time search and analytics for all types of data : structured or unstructured text, numerical data, or geospatial data, Elasticsearch can efficiently store and index it in a way that supports fast searches.
+
+[The Scala code on IntelliJ]()
 
 #### 7.1 Install & Setup Elasticsearch 
 
