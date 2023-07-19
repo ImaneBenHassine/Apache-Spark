@@ -235,17 +235,31 @@ If we ask an expert developer about the most annoying thing about an application
 
 So the only way to figure out what happened in a specific case is to **debug through the logs** and using Logging API in application isn’t a luxury, it’s a must have. Many frameworks provide some way of default logging, but it’s always best to go with the industry standard logging mechanism. 
 
-**Apache Log4j** is one of the most widely used logging frameworks and is an open source library that’s published and licensed under Apache Software. we can debug an application using Eclipse Debugging or some other tools, but that is not sufficient and feasible in a production environment. Logging mechanism will provide several benefits that we will not find in normal debugging such as :
+Like **Apache Log4j** is one of the most widely used logging frameworks and is an open source library that’s published and licensed under Apache Software and Apache Log4j 2 is the next version, that is far better than Log4j.
+
+We can debug an application using Eclipse Debugging or some other tools, but that is not sufficient and feasible in a production environment. Logging mechanism will provide several benefits with less maintenance cost that we will not find in normal debugging such as :
 - No need for human intervention
 - Can be integrated with persistent storage (Files, Database, NoSQL database, etc.)
 - Can be used for achieving auditing if it’s used efficiently
 - Sufficient
 - More productive
 
-Apache Log4j 2 is the next version, that is far better than Log4j.
-
 In this Log4j2 section, we will learn how to get started with Apache Log4j2. We will also explore Log4j2 architecture, log4j2 configuration, log4j2 logging levels, appenders, filters and much more.
 
+#### 4.1 Log4j2 architecture
+- Applications will ask **LogManager** for a **Logger** with a specific name.
+- **LogManager** will locate the appropriate **LoggerContext** and then obtain **Logger** from it.
+- If the **Logger** isn’t created yet, it will be created and associated with **LoggerConfig** according to three choices below either Logger instance will be created and 
+       associated with the **LoggerConfig** that have the **same name**. Or Logger instance will be created and associated with the LoggerConfig that have the same **Loggers 
+       parentpackage**. Or Logger instance will be created and associated with the **Root LoggerConfig**. 
+- **LoggerConfig** objects are created from Logger declaration in the configuration file. LoggerConfig is also used to handle **LogEvents** and delegate them for their defined **Log4j2 Appenders**.
+- Root logger is an exceptional case, in terms of its existence. It always exists and at the top of any logger hierarchy.
+- The name of log4j2 loggers are case sensitive.
+- Except root logger, all loggers can be obtained through passing their name into **LogManager.getLogger()**.
+- LoggerContext is a vocal point for Logging system as you may have multiple LoggerContexts inside your application. Per each LoggerContext an active configuration should be set.
+- Log4j2 configuration contains all Logging system assets; LoggerConfig(s), Appender(s), Filter(s) and many others.
+- Calling of LogManager.getLogger() by passing the same name will always return the reference for the exact same logger instance.
+- Configuration of Logging system is typically done with the application initialization. This can take different forms; programmatically or by reading a log4j2 configuration file
 
 #### 4.1 Get Log4j
 Declares the following dependencies :
