@@ -332,7 +332,7 @@ at this point we need to add the file configuration into the project, under ress
         </Loggers>
      </Configuration>
 
-But the same error still pump out so as a solution we will add the Basic Configuration of the by default logger before the logger just created :
+But the same error still pump out so as a solution we will add the **Basic Configuration** of the by default logger before the logger just created :
 
       BasicConfigurator.configure()
      // logging this class HelloScala
@@ -342,3 +342,24 @@ And now we get to see our logging messages. Still, my file of configuration was 
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/58630e42-e7f4-42e7-8787-af239d582890)
 
+#### 4.4 Exemples 
+##### 4.4.1 Function conversion() 
+A simple converiosn function return an integer :
+
+        def convert_int (number_text : String) : Int = {
+          try {
+            val number : Int = number_text.toInt
+             return number
+           } catch {
+               case ex : Exception => 0
+          }}
+Now we call the function with a provoking error by adding a char to the input ineteger and we can see that the value **0** is returned as munched on the **Execption** and the rest of the program is generated normally .
+
+       val num : Int = convert_int("10abc")
+       log_appli.info(s"the value of your converted number is  : ${num}")
+
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/900717fc-94c2-483b-9ec6-9458401c2d09)
+
+##### 4.4.2 Function division() 
+
+##### 4.4.3 Method read_file() 
