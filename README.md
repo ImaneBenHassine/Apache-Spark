@@ -272,16 +272,10 @@ Configuration of Log4j 2 can be accomplished in 1 of 4 ways: Through a configura
 - The level of the root logger is defined as DEBUG. The DEBUG attaches the appender named X to it.
 - Set the appender named X to be a valid appender.
 - Set the layout for the appender X.
-
-- Define the root logger with appender X
-log4j.rootLogger = DEBUG, X
-
-- Set the appender named X to be a File appender
-log4j.appender.X=org.apache.log4j.FileAppender
-
-- Define the layout for X appender
-log4j.appender.X.layout=org.apache.log4j.PatternLayout
-log4j.appender.X.layout.conversionPattern=%m%n
+- Define the root logger with appender X : log4j.rootLogger = DEBUG, X
+- Set the appender named X to be a File appender : log4j.appender.X=org.apache.log4j.FileAppender
+- Define the layout for X appender : log4j.appender.X.layout=org.apache.log4j.PatternLayout
+                                     log4j.appender.X.layout.conversionPattern=%m%n
 
 #### 4.2 Get Log4j
 Declares the following dependencies from Maven
