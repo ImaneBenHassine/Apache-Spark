@@ -344,7 +344,7 @@ And now we get to see our logging messages. Still, my file of configuration was 
 
 #### 4.4 Exemples 
 ##### 4.4.1 Function conversion() 
-A simple converiosn function return an integer :
+A simple conversion function that returns an integer :
 
         def convert_int (number_text : String) : Int = {
           try {
@@ -353,7 +353,7 @@ A simple converiosn function return an integer :
            } catch {
                case ex : Exception => 0
           }}
-Now we call the function with a provoking error by adding a char to the input ineteger and we can see that the value **0** is returned as munched on the **Execption** and the rest of the program is generated normally .
+Now we call the function with a provoking error by adding a text to the input ineteger and we can see that the value **0** is returned as an **Execption** and the rest of the program is generated normally .
 
        val num : Int = convert_int("10abc")
        log_appli.info(s"the value of your converted number is  : ${num}")
@@ -361,5 +361,22 @@ Now we call the function with a provoking error by adding a char to the input in
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/900717fc-94c2-483b-9ec6-9458401c2d09)
 
 ##### 4.4.2 Function division() 
+A simple division function that needs a numerator and a  denominator
+
+     def division (numerator : Int ,  denominator : Int) : Double ={
+        val result = numerator / denominator
+        return result }
+
+Here we will be adding the try/cath on the variable istsefl when we call the function and provoking an error by setting the denominator to 0
+
+     val divisor : Double = try{
+        division(12,0)
+      } catch {
+        case ex : ArithmeticException => 0  // must put a double type same as the return value of the fucntion
+        case ex2: IllegalArgumentException => 0
+      }
+    log_appli.info(s"the value of the divison is: $divisor ")
+
+  ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/c7b3252b-0229-4da3-93a6-f8787349aaec)
 
 ##### 4.4.3 Method read_file() 
