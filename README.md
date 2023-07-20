@@ -380,3 +380,18 @@ Here we will be adding the try/cath on the variable istsefl when we call the fun
   ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/c7b3252b-0229-4da3-93a6-f8787349aaec)
 
 ##### 4.4.3 Method read_file() 
+A simple method to read a file with scala 
+
+     import scala.io._ // to read a file with scala
+     def read_file (path_file : String) : Unit ={
+     try {
+     val file = Source.fromFile(path_file)
+        file.getLines()
+       file.close()
+     } catch {
+     case ex : FileNotFoundException => log_appli.error("your file does not exists.check the path "+ ex.printStackTrace() ) // ex.printStackTrace() to show error details
+     }}
+
+To provoke an error, we will call the method with a fiction path of an no existing file.
+
+  ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/975ec915-19c7-424b-9971-41bfe65ce3a6)
