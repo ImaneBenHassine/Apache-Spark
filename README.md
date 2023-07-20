@@ -341,3 +341,4 @@ But the same error still pump out so as a solution we will add the Basic Configu
 And now we get to see our logging messages. Still, my file of configuration was not used cause the message should be formatted by date, hour, minute as stated , it is probably a problem related to Windows.
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/58630e42-e7f4-42e7-8787-af239d582890)
+
