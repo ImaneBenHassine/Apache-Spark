@@ -273,13 +273,13 @@ Configuration of Log4j 2 can be accomplished in 1 of 4 ways: Through a configura
 - Set the appender named X to be a valid appender.
 - Set the layout for the appender X.
 
-# Define the root logger with appender X
+- Define the root logger with appender X
 log4j.rootLogger = DEBUG, X
 
-# Set the appender named X to be a File appender
+- Set the appender named X to be a File appender
 log4j.appender.X=org.apache.log4j.FileAppender
 
-# Define the layout for X appender
+- Define the layout for X appender
 log4j.appender.X.layout=org.apache.log4j.PatternLayout
 log4j.appender.X.layout.conversionPattern=%m%n
 
@@ -299,7 +299,7 @@ then we create a logging for our class with a specific name.
 
         private val log_appli : Logger =LogManager.getLogger("Logger_Console")
 
- And we add logging message on one of our functions as shwon below
+ And we add logging message on one of our functions as shown below
  
            /* my first function  */
        def count_leng(text: String) : Int = {
@@ -309,9 +309,9 @@ then we create a logging for our class with a specific name.
 
 we run the code , but this error appear :
 
-  log4j:WARN No appenders could be found for logger (Logger_Console).
-  log4j:WARN Please initialize the log4j system properly.
-  log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+    log4j:WARN No appenders could be found for logger (Logger_Console).
+    log4j:WARN Please initialize the log4j system properly.
+    log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
  
 at this point we need to add the file configuration into the project, under ressources as an FXML file
  
