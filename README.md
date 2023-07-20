@@ -262,9 +262,8 @@ In this Log4j2 section, we will learn how to get started with Apache Log4j2. We 
 - Log4j2 configuration contains all Logging system assets; LoggerConfig(s), Appender(s), Filter(s) and many others.
 - Calling of LogManager.getLogger() by passing the same name will always return the reference for the exact same logger instance.
 - Configuration of Logging system is typically done with the application initialization. This can take different forms; programmatically or by reading a log4j2 configuration 
-       file
+       file.
   
-#### 4.2 log4j2.properties
 The log4j2.properties file is a log4j configuration file which keeps properties in key-value pairs. By default, the LogManager looks for a file named log4j.properties in the CLASSPATH.
 
 Configuration of Log4j 2 can be accomplished in 1 of 4 ways: Through a configuration file written in **XML**, JSON, YAML, or properties format.
