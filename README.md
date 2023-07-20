@@ -417,10 +417,44 @@ If path of Winutils is not correct a FileNotFoundException message will be displ
 
 The debugging techniques seen so far **error manager** + **logging** are reactive, which means that they wait for the error to run before processing it. This can take longer and in this case, the reliability of our application depends on the cases of errors that we could anticipate. If non-anticipated error cases occur in production, then the application will "crash". 
 
-There is a much more proactive way to make applications more robust, and that is through software testing. Based on the scope of application covered, there are two types of tests: unit and integration tests. What we’re interested in here is unit testing. The scope of integration tests is much too broad to be carried out by a developer. 
-#### 6 Unit Testing
+There is a much more proactive way to make applications more robust, and that is through software testing. Based on the scope of application covered, there are two types of tests: **unit** and **integration** tests. What we’re interested in here is unit testing. The scope of integration tests is much too broad to be carried out by a developer. 
+
+#### 6 Unit Tests
 According to a blog from [DZone](https://dzone.com/articles/7-tips-for-writing-better-unit-tests-in-java#:~:text=Unit%20tests%20are%20used%20to,level%20and%20executed%20via%20automation.)
 
 Unit tests are used to test individual code components and ensure that code works the way it was intended to. Unit tests are written and executed by developers. Most of the time a testing framework like JUnit is used. Test cases are typically written at a method level and executed via automation.
 
-##### 6.1
+##### 6.1 JUnit
+JUnit is a unit testing framework to write and run repeatable automated tests on Java.JUnit comes with multiple assert statements, which allows to test the code under test. Simple assert statements like :
+- assertEquals
+- assertTrue
+- assertFalse
+- assertNotNull
+- assertNull
+
+Here will be using JUnit v 4.12 (the stablest) as Maven dependency. Here we precise the scope ""test"" since the test program should be separated from ""scr"" as a good practice.
+
+        <!-- https://mvnrepository.com/artifact/junit/junit -->
+    <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+       <version>4.12</version>
+       <scope>test</scope>
+      </dependency>
+
+##### 6.2 Testing Function division() 
+Here we are creation a method to test the division fucntion created earlier
+
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/c14ac15a-7f34-4ad5-b220-23e9bf1a110d)
+
+let's test with an error
+
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/1cbb594c-6b6d-43f5-84de-13565395b3dc)
+
+##### 6.3 Testing Function conversion() 
+here we are provoking the test with an error :
+
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/e2f06414-cdcd-4a62-a954-4d3c94e401fd)
+
+
+##### 6.2 Scala Test
