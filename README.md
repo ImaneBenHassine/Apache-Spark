@@ -434,14 +434,20 @@ JUnit is a unit testing framework to write and run repeatable automated tests on
 
 Here will be using JUnit v 4.12 (the stablest) as Maven dependency. Here we precise the scope ""test"" since the test program should be separated from ""scr"" as a good practice.
 
+- **Step 1** : Add the Maven dependency for **JUnit v 4.12**
+  
         <!-- https://mvnrepository.com/artifact/junit/junit -->
-    <dependency>
-        <groupId>junit</groupId>
-        <artifactId>junit</artifactId>
-       <version>4.12</version>
-       <scope>test</scope>
-      </dependency>
+       <dependency>
+         <groupId>junit</groupId>
+         <artifactId>junit</artifactId>
+        <version>4.12</version>
+        <scope>test</scope>
+       </dependency>
 
+- **Step 2** : Denotes that a method is a test method :exemple @Test
+- **Step 3** : Annotation of the test function
+- **Step 4** : Assertion
+  
 ##### 6.2 Testing Function division() 
 Here we are creation a method to test the division fucntion created earlier
 
