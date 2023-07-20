@@ -389,3 +389,29 @@ A simple method to read a file with scala. The catch will be on **FileNotFoundEx
 To provoke an error, we will call the method with a fiction path of a no existing file.
 
   ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/975ec915-19c7-424b-9971-41bfe65ce3a6)
+
+##### 4.4.4 Spark Session
+to trace potential error related to creating a spark session
+
+      def Session_Spark (env: Boolean = true): SparkSession = {
+        try {
+      if (env == true) {
+        System.setProperty("hadoop.home.dir", "C:/Users/MonPC/Desktop/01-ImenBH/Projects/PySpark/Hadoop") // logging if winutils not found
+        ss = SparkSession.builder
+          .master("local[*]")
+          .config("spark.sql.crossJoin.enabled", "true")
+          //    .enableHiveSupport()
+          .getOrCreate()
+      } else {
+        ss = SparkSession.builder
+          .appName("Mon application Spark")
+          .config("spark.serializer", "org.apache.spark.serializer.KryoSerializer")
+          .config("spark.sql.crossJoin.enabled", "true")
+          //.enableHiveSupport()
+          .getOrCreate()
+      } } catch {
+      case ex: FileNotFoundException => trace_log.error("winutils of Haddop not found on the path  " + ex.printStackTrace())
+      case ex: Exception => trace_log.error("Error with initialisation of the Spark session " + ex.printStackTrace())
+      } return ss  }
+
+If path of Winutils is not correct a FileNotFoundException message will be an error pump out
