@@ -335,8 +335,8 @@ And now we get to see our logging messages. Still, my file of configuration was 
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/58630e42-e7f4-42e7-8787-af239d582890)
 
-#### 4.4 Exemples 
-##### 4.4.1 Function conversion() 
+#### 5 Exemples with try{}, catch {}
+##### 5.1 Function conversion() 
 A simple conversion function that returns an integer :
 
         def convert_int (number_text : String) : Int = {
@@ -353,7 +353,7 @@ Now we call the function with a provoking error by adding a text to the input in
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/900717fc-94c2-483b-9ec6-9458401c2d09)
 
-##### 4.4.2 Function division() 
+##### 5.2 Function division() 
 A simple division function that needs a numerator and a  denominator
 
      def division (numerator : Int ,  denominator : Int) : Double ={
@@ -372,7 +372,7 @@ Here we will be adding the try/cath on the variable istsefl when we call the fun
 
   ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/c7b3252b-0229-4da3-93a6-f8787349aaec)
 
-##### 4.4.3 Method read_file() 
+##### 5.3 Method read_file() 
 A simple method to read a file with scala. The catch will be on **FileNotFoundException** type of error
 
      import scala.io._ // to read a file with scala
@@ -389,7 +389,7 @@ To provoke an error, we will call the method with a fiction path of a no existin
 
   ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/975ec915-19c7-424b-9971-41bfe65ce3a6)
 
-##### 4.4.4 Spark Session
+##### 5.4 Spark Session
 to trace potential error related to creating a spark session
 
       def Session_Spark (env: Boolean = true): SparkSession = {
@@ -413,4 +413,14 @@ to trace potential error related to creating a spark session
       case ex: Exception => trace_log.error("Error with initialisation of the Spark session " + ex.printStackTrace())
       } return ss  }
 
-If path of Winutils is not correct a FileNotFoundException message will be an error pump out
+If path of Winutils is not correct a FileNotFoundException message will be displayed.
+
+The debugging techniques seen so far **error manager** + **logging** are reactive, which means that they wait for the error to run before processing it. This can take longer and in this case, the reliability of our application depends on the cases of errors that we could anticipate. If non-anticipated error cases occur in production, then the application will "crash". 
+
+There is a much more proactive way to make applications more robust, and that is through software testing. Based on the scope of application covered, there are two types of tests: unit and integration tests. What we’re interested in here is unit testing. The scope of integration tests is much too broad to be carried out by a developer. 
+#### 6 Unit Testing
+According to a blog from [DZone](https://dzone.com/articles/7-tips-for-writing-better-unit-tests-in-java#:~:text=Unit%20tests%20are%20used%20to,level%20and%20executed%20via%20automation.)
+
+Unit tests are used to test individual code components and ensure that code works the way it was intended to. Unit tests are written and executed by developers. Most of the time a testing framework like JUnit is used. Test cases are typically written at a method level and executed via automation.
+
+##### 6.1
