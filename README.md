@@ -522,10 +522,19 @@ Then creating the class test for the spark session
               var env : Boolean = true
               val sst = SparkRDD_DF.Session_Spark(env)}
 
-to be able to extends the call the sparksession inside the class test we need to create a **trait** for the spark session **SparkSessionProvider** , later we extends it along with the class test, otherwise we can't call the sparksession created earlier in the src folder into a class test.
+In order to call the sparksession inside the class test we need to create a **trait** for the spark session in this cas named **SparkSessionProvider** , later we extends it along with the class test, otherwise we can't call the sparksession created earlier in the src folder into a class test.
 
      trait SparkSessionProvider  {
        val sst = SparkSession.builder
            .master("local[*]")
            .getOrCreate()}
 
+Now we create the DF as shown below 
+
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/982a88b4-a8d4-4373-b380-fbe0e79fa5be)
+
+So to test the Dataframe will be using the Matchers of FlatSpec
+
+- testing number of rows with a rovocative error :
+
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/cbb279b1-5b4e-45e2-bef6-771d74809c83)
