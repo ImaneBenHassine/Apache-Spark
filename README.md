@@ -485,3 +485,10 @@ ScalaTest's main traits, classes, and other members, including members supportin
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/6c0e3520-9aa2-44f8-8697-a1b75750cdae)
 
+Now let's generate an error 
+
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/cacc7fcc-a73a-4b04-a4c3-49d6c6bee98f)
+
+By adding another test method and setting **assert** as an **ArithmeticException** , the **test passed**.
+
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/e3c17644-f1ce-4254-86ac-84c3dad6b458)
