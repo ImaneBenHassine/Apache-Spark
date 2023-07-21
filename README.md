@@ -448,7 +448,7 @@ Here will be using JUnit v 4.12 (the stablest) as Maven dependency. Here we prec
 - **Step 3** : Annotation of the test function
 - **Step 4** : Assertion
   
-##### 6.2 Testing Function division() 
+##### 6.1.1 Testing Function division() 
 Here we are creation a method to test the division fucntion created earlier
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/c14ac15a-7f34-4ad5-b220-23e9bf1a110d)
@@ -457,13 +457,31 @@ let's test with an error
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/1cbb594c-6b6d-43f5-84de-13565395b3dc)
 
-##### 6.3 Testing Function conversion() 
+##### 6.1.2 Testing Function conversion() 
 here we are provoking the test with an error :
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/e2f06414-cdcd-4a62-a954-4d3c94e401fd)
 
-##### 6.4 Scala Test
+##### 6.2 Scala Test
 
 The special feature of Scalatest is that it supports several **styles of testing** at once. So, we can simply change it and use other more familiar with. ScalaTest uses its own extension points to support several styles of testing out of the box. We can select whatever style best fits the situation. The idea is not to impose a test philosophy , but to create the one that suits the most. ScalaTest is designed to grow with the demands of its users.
 
+ScalaTest's main traits, classes, and other members, including members supporting ScalaTest's DSL for the Scala interpreter are availbe [here (http://doc.scalatest.org/1.8/org/scalatest/package.html)
+
+- **Step 1** : Add the Maven dependency for **ScalaTest** the stable version recommended is 3.1.1
+
+      <!-- https://mvnrepository.com/artifact/org.scalatest/scalatest -->
+       <dependency>
+         <groupId>org.scalatest</groupId>
+          <artifactId>scalatest_2.11</artifactId>
+          <version>3.1.1</version>
+          <scope>test</scope>
+       </dependency>
+
+- **Step 2** : Denotes that a method is a test method :exemple test
+- **Step 3** : Assertion
+
+##### 6.2.1 Testing Function division() 
+
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/6c0e3520-9aa2-44f8-8697-a1b75750cdae)
 
