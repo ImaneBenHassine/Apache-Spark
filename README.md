@@ -39,7 +39,10 @@ PySpark supports two types of Data Abstractions:
    1. Installing Spark
    2. Installing & configurating Intellij
    3. Debugging Errors with Scala 
-   4. API logging   
+   4. API logging
+   5. Exemples with try,catch{}
+   6. Unit Tests
+   7. Unit Tests of a Spark Application
    
 ### 1. Installing Spark on Windows 10
    #### 1.1 Install Java 
@@ -335,8 +338,8 @@ And now we get to see our logging messages. Still, my file of configuration was 
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/58630e42-e7f4-42e7-8787-af239d582890)
 
-#### 5 Exemples with try{}, catch {}
-##### 5.1 Function conversion() 
+### 5 Exemples with try{}, catch {}
+#### 5.1 Function conversion() 
 A simple conversion function that returns an integer :
 
         def convert_int (number_text : String) : Int = {
@@ -353,7 +356,7 @@ Now we call the function with a provoking error by adding a text to the input in
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/900717fc-94c2-483b-9ec6-9458401c2d09)
 
-##### 5.2 Function division() 
+#### 5.2 Function division() 
 A simple division function that needs a numerator and a  denominator
 
      def division (numerator : Int ,  denominator : Int) : Double ={
@@ -372,7 +375,7 @@ Here we will be adding the try/cath on the variable istsefl when we call the fun
 
   ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/c7b3252b-0229-4da3-93a6-f8787349aaec)
 
-##### 5.3 Method read_file() 
+#### 5.3 Method read_file() 
 A simple method to read a file with scala. The catch will be on **FileNotFoundException** type of error
 
      import scala.io._ // to read a file with scala
@@ -389,7 +392,7 @@ To provoke an error, we will call the method with a fiction path of a no existin
 
   ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/975ec915-19c7-424b-9971-41bfe65ce3a6)
 
-##### 5.4 Spark Session
+#### 5.4 Spark Session
 to trace potential error related to creating a spark session
 
       def Session_Spark (env: Boolean = true): SparkSession = {
@@ -419,12 +422,12 @@ The debugging techniques seen so far **error manager** + **logging** are reactiv
 
 There is a much more proactive way to make applications more robust, and that is through software testing. Based on the scope of application covered, there are two types of tests: **unit** and **integration** tests. What we’re interested in here is unit testing. The scope of integration tests is much too broad to be carried out by a developer. 
 
-#### 6 Unit Tests
+### 6 Unit Tests
 According to a blog from [DZone](https://dzone.com/articles/7-tips-for-writing-better-unit-tests-in-java#:~:text=Unit%20tests%20are%20used%20to,level%20and%20executed%20via%20automation.)
 
 Unit tests are used to test individual code components and ensure that code works the way it was intended to. Unit tests are written and executed by developers. Most of the time a testing framework like JUnit is used. Test cases are typically written at a method level and executed via automation.
 
-##### 6.1 JUnit
+#### 6.1 JUnit
 JUnit is a unit testing framework to write and run repeatable automated tests on Java.JUnit comes with multiple assert statements, which allows to test the code under test. Simple assert statements like :
 - assertEquals
 - assertTrue
@@ -462,7 +465,7 @@ here we are provoking the test with an error :
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/e2f06414-cdcd-4a62-a954-4d3c94e401fd)
 
-##### 6.2 Scala Test
+#### 6.2 Scala Test
 
 The special feature of Scalatest is that it supports several **styles of testing** at once. So, we can simply change it and use other more familiar with. ScalaTest uses its own extension points to support several styles of testing out of the box. We can select whatever style best fits the situation. The idea is not to impose a test philosophy , but to create the one that suits the most. ScalaTest is designed to grow with the demands of its users.
 
@@ -503,3 +506,27 @@ the FlatSpec style's structure is flat like xUnit, so simple and familiar, but t
 We can write more than one test method on the same class 
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/bbfed4b4-0b87-411d-93ff-e6a6c1fa00cf)
+
+### 7 Unit Tests of Spark Application
+#### 7.1 Using FlatSpec
+Here we create a class test for a Spark Session creation & DataFrame. Starting by importing packages and classes
+
+      import org.scalatest.matchers.should.Matchers
+      import org.scalatest.flatspec.AnyFlatSpec
+      import org.scalatest._
+
+Then creating the class test for the spark session 
+
+       class SparkTestUnit extends AnyFlatSpec with SparkSessionProvider {
+              it should("Instantiate a Spark Session") in {
+              var env : Boolean = true
+              val sst = SparkRDD_DF.Session_Spark(env)}
+
+to be able to extends the call the sparksession inside the class test we need to create a **trait** for the spark session **SparkSessionProvider** , later we extends it along with the class test, otherwise we can't call the sparksession created earlier in the src folder into a class test.
+
+     trait SparkSessionProvider  {
+       val sst = SparkSession.builder
+           .master("local[*]")
+           .getOrCreate()}
+
+
