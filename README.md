@@ -436,13 +436,13 @@ Here will be using JUnit v 4.12 (the stablest) as Maven dependency. Here we prec
 
 - **Step 1** : Add the Maven dependency for **JUnit v 4.12**
   
-        <!-- https://mvnrepository.com/artifact/junit/junit -->
-       <dependency>
-         <groupId>junit</groupId>
-         <artifactId>junit</artifactId>
-        <version>4.12</version>
-        <scope>test</scope>
-       </dependency>
+         <!-- https://mvnrepository.com/artifact/junit/junit -->
+          <dependency>
+             <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+           <version>4.12</version>
+          <scope>test</scope>
+         </dependency>
 
 - **Step 2** : Denotes that a method is a test method :exemple @Test
 - **Step 3** : Annotation of the test function
@@ -462,5 +462,8 @@ here we are provoking the test with an error :
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/e2f06414-cdcd-4a62-a954-4d3c94e401fd)
 
+##### 6.4 Scala Test
 
-##### 6.2 Scala Test
+The special feature of Scalatest is that it supports several **styles of testing** at once. So, we can simply change it and use other more familiar with. ScalaTest uses its own extension points to support several styles of testing out of the box. We can select whatever style best fits the situation. The idea is not to impose a test philosophy , but to create the one that suits the most. ScalaTest is designed to grow with the demands of its users.
+
+
