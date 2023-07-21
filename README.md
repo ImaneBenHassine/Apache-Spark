@@ -500,3 +500,6 @@ the FlatSpec style's structure is flat like xUnit, so simple and familiar, but t
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/a4dafd63-9cff-4923-87c5-16d7d90f3f50)
 
+We can write more than one test method on the same class 
+
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/bbfed4b4-0b87-411d-93ff-e6a6c1fa00cf)
