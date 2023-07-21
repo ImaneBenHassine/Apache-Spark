@@ -529,7 +529,7 @@ In order to call the sparksession inside the class test we need to create a **tr
            .master("local[*]")
            .getOrCreate()}
 
-Now we create the DF as shown below 
+Now we create the DF as shown below by defining a the schema using **StructField**. Then we define the data for each of the columns in a sequence usnig **Row**
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/982a88b4-a8d4-4373-b380-fbe0e79fa5be)
 
@@ -541,7 +541,10 @@ So to test the Dataframe will be using the Matchers of FlatSpec
 
 #### 7.1 Using Spark Testing Base
 
-we will need a quite specifi version of the Maven dependency based on the spark & scala version 
+Spark Testing Base is a library uses property based testing philosophy to produce the fuzziness in Spark RDD, DataFrame and DataSets among other common base classes.
+Spark Testing Base provides a powerful base classes very helpful to write the test code pretty fast and efficient.
+
+For the Maven dependency we will need a quite specifix version based on the spark & scala versions :
 
     <!-- https://mvnrepository.com/artifact/com.holdenkarau/spark-testing-base -->
        <dependency>
@@ -550,3 +553,7 @@ we will need a quite specifi version of the Maven dependency based on the spark 
           <version>${spark.version}_${sparktestingbase.version}</version>
           <scope>test</scope>
        </dependency>
+
+Then we import the package : import com.holdenkarau.spark.testing._
+
+and we extend the class test with **DataFrameSuiteBase** : class SparkTestUnit extends AnyFlatSpec with SparkSessionProvider with DataFrameSuiteBase 
