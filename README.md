@@ -529,4 +529,3 @@ to be able to extends the call the sparksession inside the class test we need to
            .master("local[*]")
            .getOrCreate()}
 
-
