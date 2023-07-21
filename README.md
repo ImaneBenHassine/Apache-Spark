@@ -508,7 +508,7 @@ We can write more than one test method on the same class
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/bbfed4b4-0b87-411d-93ff-e6a6c1fa00cf)
 
-### 7 Unit Tests of Spark Application
+### 7. Unit Tests of Spark Application
 #### 7.1 Using FlatSpec
 Here we create a class test for a Spark Session creation & DataFrame. Starting by importing packages and classes
 
@@ -559,4 +559,14 @@ Then we import the package : import com.holdenkarau.spark.testing._
 
 and we extend the class test with **DataFrameSuiteBase** : class SparkTestUnit extends AnyFlatSpec with SparkSessionProvider with DataFrameSuiteBase 
 
-### 8 Documentation
+### 8. Documentation
+***Say what you mean, simply and directly.***  [Brian Kernighan]
+
+- **Minimum viable documentation** : a small set of fresh and accurate docs are better than a sprawling. Write short and useful documents. Cut out everything unnecessary, while also making a habit of continually massaging and improving every doc to suit the changing needs.
+- Update docs with code : Change your documentation in the same CL as the code change.
+- Delete dead documentation : Dead docs are bad
+- Prefer the good over the perfect : documentation should be as good as possible within a reasonable time frame
+
+
+
+  
