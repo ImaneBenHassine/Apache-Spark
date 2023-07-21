@@ -538,3 +538,15 @@ So to test the Dataframe will be using the Matchers of FlatSpec
 - testing number of rows with a rovocative error :
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/cbb279b1-5b4e-45e2-bef6-771d74809c83)
+
+#### 7.1 Using Spark Testing Base
+
+we will need a quite specifi version of the Maven dependency based on the spark & scala version 
+
+    <!-- https://mvnrepository.com/artifact/com.holdenkarau/spark-testing-base -->
+       <dependency>
+          <groupId>com.holdenkarau</groupId>
+          <artifactId>spark-testing-base_${scala.version}</artifactId>
+          <version>${spark.version}_${sparktestingbase.version}</version>
+          <scope>test</scope>
+       </dependency>
