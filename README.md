@@ -481,7 +481,7 @@ ScalaTest's main traits, classes, and other members, including members supportin
 - **Step 2** : Denotes that a method is a test method :exemple test
 - **Step 3** : Assertion
 
-##### 6.2.1 Testing Function division() 
+##### 6.2.1 Testing with FunSuite
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/6c0e3520-9aa2-44f8-8697-a1b75750cdae)
 
@@ -492,3 +492,11 @@ Now let's generate an error
 By adding another test method and setting **assert** as an **ArithmeticException** , the **test passed**.
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/e3c17644-f1ce-4254-86ac-84c3dad6b458)
+
+##### 6.2.2 Testing with FlatSpec
+FlatSpec, is a good choice to move from XUnit to BDD.It is this library that is recommended by default by the Scalatest team for performing unit tests in scala. 
+
+the FlatSpec style's structure is flat like xUnit, so simple and familiar, but the test names must be written in a specification style: "X should Y," "A must B," etc using **Matchers**.
+
+![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/a4dafd63-9cff-4923-87c5-16d7d90f3f50)
+
