@@ -43,6 +43,7 @@ PySpark supports two types of Data Abstractions:
    5. Exemples with try,catch{}
    6. Unit Tests
    7. Unit Tests of a Spark Application
+   8. Documentation
    
 ### 1. Installing Spark on Windows 10
    #### 1.1 Install Java 
@@ -557,3 +558,5 @@ For the Maven dependency we will need a quite specifix version based on the spar
 Then we import the package : import com.holdenkarau.spark.testing._
 
 and we extend the class test with **DataFrameSuiteBase** : class SparkTestUnit extends AnyFlatSpec with SparkSessionProvider with DataFrameSuiteBase 
+
+### 8 Documentation
