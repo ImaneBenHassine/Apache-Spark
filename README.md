@@ -88,9 +88,9 @@ PySpark supports two types of Data Abstractions:
  
 #### 1.4 Launch Spark
 Open a new command-prompt window using the right-click and Run as administrator, go to spark directory " cd C:\..\bin " then execute : 
-    
-       spark-shell.cmd
-
+```shell    
+spark-shell.cmd
+```
 Or using **spark-submit.cmd** , adapted more for the production deployment
 
 If the environment path was correctly setted, the system should display several lines indicating the status of the application. You may get a Java pop-up. Select Allow access to continue.
@@ -108,9 +108,9 @@ Let's use Scala to read the contents of a file such as the README file in the Sp
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/4f0fbb8a-ef5f-4674-a47b-288e615bffe9)
 
 Then, we can view the file contents by using this command to call an action which instructs Spark to print 11 lines from the file you specified 
-
-       r.take(11).foreach(println)
-
+```shell
+r.take(11).foreach(println)
+```
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/c29ae7f4-53ce-4be4-95cf-39367d02e877)
 
 ### 2. Installing & configurating Intellij
