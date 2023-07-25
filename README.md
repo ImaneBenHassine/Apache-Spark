@@ -289,21 +289,21 @@ Declares the following dependencies from Maven
 Create a log4j.properties file and put it into the resources folder
 
 we started by importing dependecies :
-
-         import org.apache.log4j._
-
+```Scala 
+ import org.apache.log4j._
+```
 then we create a logging for our class with a specific name.
-
-        private val log_appli : Logger =LogManager.getLogger("Logger_Console")
-
+```Scala 
+private val log_appli : Logger =LogManager.getLogger("Logger_Console")
+```
  And we add logging message on one of our functions as shown below
- 
-           /* my first function  */
-       def count_leng(text: String) : Int = {
-       log_appli.info("start the  logging")
-       log_appli.info(s"the parameter logged by Log4J for this function is : $text")
-       log_appli.warn(s"Message warning Log4J : ${10+15}") // calculation done inside sting
-
+ ```Scala 
+  /* my first function  */
+ def count_leng(text: String) : Int = {
+    log_appli.info("start the  logging")
+    log_appli.info(s"the parameter logged by Log4J for this function is : $text")
+    log_appli.warn(s"Message warning Log4J : ${10+15}") // calculation done inside sting
+```
 we run the code , but this error appear :
 
     log4j:WARN No appenders could be found for logger (Logger_Console).
@@ -313,9 +313,8 @@ we run the code , but this error appear :
 at this point we need to add the file configuration into the project, under ressources as an FXML file
  
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/370700a9-88e6-4989-b3dc-1552eb7201df)
-
+```Scala 
       <?xml version="1.0" encoding="UTF-8"?>
-      <!-- Attention !!! Pour utiliser ce template, il faudra enlever 'template' du fichier et le renommer uniquement 'log4j2' avant de le charger dans votre projet-->
     <Configuration status="warn">
         <Appenders>
            <Console name="Console" target="SYSTEM_OUT">
@@ -328,7 +327,7 @@ at this point we need to add the file configuration into the project, under ress
           </Root>
         </Loggers>
      </Configuration>
-
+```
 But the same error still pump out so as a solution we will add the **Basic Configuration** of the by default logger before the logger just created :
 ```Scala 
  BasicConfigurator.configure()
