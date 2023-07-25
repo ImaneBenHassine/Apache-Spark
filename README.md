@@ -330,11 +330,11 @@ at this point we need to add the file configuration into the project, under ress
      </Configuration>
 
 But the same error still pump out so as a solution we will add the **Basic Configuration** of the by default logger before the logger just created :
-
-      BasicConfigurator.configure()
-     // logging this class HelloScala
-     private val log_appli : Logger =LogManager.getLogger("Logger_Console")
-     
+```Scala 
+ BasicConfigurator.configure()
+// logging this class HelloScala
+ private val log_appli : Logger =LogManager.getLogger("Logger_Console")
+  ```     
 And now we get to see our logging messages. Still, my file of configuration was not used cause the message should be formatted by date, hour, minute as stated , it is probably a problem related to Windows.
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/58630e42-e7f4-42e7-8787-af239d582890)
@@ -342,7 +342,7 @@ And now we get to see our logging messages. Still, my file of configuration was 
 ### 5 Exemples with try{}, catch {}
 #### 5.1 Function conversion() 
 A simple conversion function that returns an integer :
-
+```Scala  
         def convert_int (number_text : String) : Int = {
           try {
             val number : Int = number_text.toInt
@@ -350,22 +350,23 @@ A simple conversion function that returns an integer :
            } catch {
                case ex : Exception => 0
           }}
+```
 Now we call the function with a provoking error by adding a text to the input ineteger and we can see that the value **0** is returned as an **Execption** and the rest of the program is generated normally .
-
+```Scala  
        val num : Int = convert_int("10abc")
        log_appli.info(s"the value of your converted number is  : ${num}")
-
+```
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/900717fc-94c2-483b-9ec6-9458401c2d09)
 
 #### 5.2 Function division() 
 A simple division function that needs a numerator and a  denominator
-
+```Scala  
      def division (numerator : Int ,  denominator : Int) : Double ={
         val result = numerator / denominator
         return result }
-
+```
 Here we will be adding the try/cath on the variable istsefl when we call the function and provoking an error by setting the denominator to 0
-
+```Scala  
      val divisor : Double = try{
         division(12,0)
       } catch {
@@ -373,12 +374,12 @@ Here we will be adding the try/cath on the variable istsefl when we call the fun
         case ex2: IllegalArgumentException => 0
       }
     log_appli.info(s"the value of the divison is: $divisor ")
-
+```
   ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/c7b3252b-0229-4da3-93a6-f8787349aaec)
 
 #### 5.3 Method read_file() 
 A simple method to read a file with scala. The catch will be on **FileNotFoundException** type of error
-
+```Scala  
      import scala.io._ // to read a file with scala
      def read_file (path_file : String) : Unit ={
      try {
@@ -388,14 +389,14 @@ A simple method to read a file with scala. The catch will be on **FileNotFoundEx
      } catch {
      case ex : FileNotFoundException => log_appli.error("your file does not exists.check the path "+ ex.printStackTrace() ) // ex.printStackTrace() to show error details
      }}
-
+``` 
 To provoke an error, we will call the method with a fiction path of a no existing file.
 
   ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/975ec915-19c7-424b-9971-41bfe65ce3a6)
 
 #### 5.4 Spark Session
 to trace potential error related to creating a spark session
-
+```Scala  
       def Session_Spark (env: Boolean = true): SparkSession = {
         try {
       if (env == true) {
@@ -416,7 +417,7 @@ to trace potential error related to creating a spark session
       case ex: FileNotFoundException => trace_log.error("winutils of Haddop not found on the path  " + ex.printStackTrace())
       case ex: Exception => trace_log.error("Error with initialisation of the Spark session " + ex.printStackTrace())
       } return ss  }
-
+```
 If path of Winutils is not correct a FileNotFoundException message will be displayed.
 
 The debugging techniques seen so far **error manager** + **logging** are reactive, which means that they wait for the error to run before processing it. This can take longer and in this case, the reliability of our application depends on the cases of errors that we could anticipate. If non-anticipated error cases occur in production, then the application will "crash". 
@@ -439,7 +440,7 @@ JUnit is a unit testing framework to write and run repeatable automated tests on
 Here will be using JUnit v 4.12 (the stablest) as Maven dependency. Here we precise the scope ""test"" since the test program should be separated from ""scr"" as a good practice.
 
 - **Step 1** : Add the Maven dependency for **JUnit v 4.12**
-  
+```Scala  
          <!-- https://mvnrepository.com/artifact/junit/junit -->
           <dependency>
              <groupId>junit</groupId>
@@ -447,7 +448,7 @@ Here will be using JUnit v 4.12 (the stablest) as Maven dependency. Here we prec
            <version>4.12</version>
           <scope>test</scope>
          </dependency>
-
+```
 - **Step 2** : Denotes that a method is a test method :exemple @Test
 - **Step 3** : Annotation of the test function
 - **Step 4** : Assertion
@@ -473,7 +474,7 @@ The special feature of Scalatest is that it supports several **styles of testing
 ScalaTest's main traits, classes, and other members, including members supporting ScalaTest's DSL for the Scala interpreter are availbe [here (http://doc.scalatest.org/1.8/org/scalatest/package.html)
 
 - **Step 1** : Add the Maven dependency for **ScalaTest** the stable version recommended is 3.1.1
-
+```Scala
       <!-- https://mvnrepository.com/artifact/org.scalatest/scalatest -->
        <dependency>
          <groupId>org.scalatest</groupId>
@@ -481,7 +482,7 @@ ScalaTest's main traits, classes, and other members, including members supportin
           <version>3.1.1</version>
           <scope>test</scope>
        </dependency>
-
+```
 - **Step 2** : Denotes that a method is a test method :exemple test
 - **Step 3** : Assertion
 
@@ -511,25 +512,27 @@ We can write more than one test method on the same class
 ### 7. Unit Tests of Spark Application
 #### 7.1 Using FlatSpec
 Here we create a class test for a Spark Session creation & DataFrame. Starting by importing packages and classes
-
+```Scala
       import org.scalatest.matchers.should.Matchers
       import org.scalatest.flatspec.AnyFlatSpec
       import org.scalatest._
-
+```
 Then creating the class test for the spark session 
 
-       class SparkTestUnit extends AnyFlatSpec with SparkSessionProvider {
+```Scala
+class SparkTestUnit extends AnyFlatSpec with SparkSessionProvider {
               it should("Instantiate a Spark Session") in {
               var env : Boolean = true
               val sst = SparkRDD_DF.Session_Spark(env)}
-
+```
 In order to call the sparksession inside the class test we need to create a **trait** for the spark session in this cas named **SparkSessionProvider** , later we extends it along with the class test, otherwise we can't call the sparksession created earlier in the src folder into a class test.
 
-     trait SparkSessionProvider  {
-       val sst = SparkSession.builder
-           .master("local[*]")
-           .getOrCreate()}
-
+```Scala
+trait SparkSessionProvider  {
+  val sst = SparkSession.builder
+   .master("local[*]")
+   .getOrCreate()}
+```
 Now we create the DF as shown below by defining a the schema using **StructField**. Then we define the data for each of the columns in a sequence usnig **Row**
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/982a88b4-a8d4-4373-b380-fbe0e79fa5be)
@@ -540,29 +543,35 @@ So to test the Dataframe will be using the Matchers of FlatSpec
 
 ![image](https://github.com/ImaneBenHassine/Apache-Spark/assets/26963240/cbb279b1-5b4e-45e2-bef6-771d74809c83)
 
-#### 7.1 Using Spark Testing Base
+#### 7.2 Using Spark Testing Base
 
 Spark Testing Base is a library uses property based testing philosophy to produce the fuzziness in Spark RDD, DataFrame and DataSets among other common base classes.
 Spark Testing Base provides a powerful base classes very helpful to write the test code pretty fast and efficient.
 
 For the Maven dependency we will need a quite specifix version based on the spark & scala versions :
-
+```Scala
     <!-- https://mvnrepository.com/artifact/com.holdenkarau/spark-testing-base -->
-       <dependency>
-          <groupId>com.holdenkarau</groupId>
-          <artifactId>spark-testing-base_${scala.version}</artifactId>
-          <version>${spark.version}_${sparktestingbase.version}</version>
-          <scope>test</scope>
-       </dependency>
-
+    <dependency>
+        <groupId>com.holdenkarau</groupId>
+        <artifactId>spark-testing-base_2.11</artifactId>
+        <version>2.4.5_0.14.0</version>
+        <scope>test</scope>
+    </dependency>
+```
 Then we import the package : import com.holdenkarau.spark.testing._
 
 and we extend the class test with **DataFrameSuiteBase** : class SparkTestUnit extends AnyFlatSpec with SparkSessionProvider with DataFrameSuiteBase 
 
 ### 8. Documentation
+Code organization is not about communicating with the computer but rather all about trying to make sure that **people** can understand the code well enough that they will be able to maintain and evolve it with some degree of efficiency and confidence.
+
+**Programs should be written for people to read, and only incidentally for machines to execute** [Abelson and Sussman]
+
+When a unit of code grows too large and contains too many elements it becomes hard to navigate or to understand: it becomes complex. The main weapon against this complexity is divide and conquer: we split the unit into smaller parts which we can understand in isolation.This [article](https://medium.com/@msandin/strategies-for-organizing-code-2c9d690b6f33) details all 4 mais stategies for Code Organazation.
+
 ***Say what you mean, simply and directly.***  [Brian Kernighan]
 
-- **Minimum viable documentation** : a small set of fresh and accurate docs are better than a sprawling. Write short and useful documents. Cut out everything unnecessary, while also making a habit of continually massaging and improving every doc to suit the changing needs.
+- Minimum viable documentation : a small set of fresh and accurate docs are better than a sprawling. Write short and useful documents. Cut out everything unnecessary, while also making a habit of continually massaging and improving every doc to suit the changing needs.
 - Update docs with code : Change your documentation in the same CL as the code change.
 - Delete dead documentation : Dead docs are bad
 - Prefer the good over the perfect : documentation should be as good as possible within a reasonable time frame
