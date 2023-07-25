@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This repository contains my notes of my Apache Spark learning journey through code and examples to show how pyspark can be used to explore big data.
+This repository contains my notes of my Apache Spark learning journey through code and examples to show how Spark can be used to explore big data.
 
 **Apache Spark** is an Open source framework, an in-memory computing processing engine that processes data on the Hadoop Ecosystem. It processes both `batch` and `real-time` data in a `parallel` and `distributed` manner.
 
