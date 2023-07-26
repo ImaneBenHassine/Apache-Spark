@@ -11,5 +11,3 @@ We will be using the [full CSV](https://bano.openstreetmap.fr/data/) to load all
 - Application development 
 - Geographic visualization in Excel 
 
-
-### Conslusion 
